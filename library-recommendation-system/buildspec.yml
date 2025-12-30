@@ -6,7 +6,11 @@ phases:
       nodejs: 20
     commands:
       - cd library-recommendation-system
+<<<<<<< HEAD
       - npm ci
+=======
+      - npm install
+>>>>>>> 958974d (Fix CodeBuild: use npm install instead of npm ci)
 
   build:
     commands:
@@ -16,4 +20,7 @@ artifacts:
   base-directory: library-recommendation-system/dist
   files:
     - '**/*'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 958974d (Fix CodeBuild: use npm install instead of npm ci)
