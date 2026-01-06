@@ -1,143 +1,272 @@
-# Library Recommendation System
+# Library Recommendation System 📚
 
-An AI-powered library book recommendation system built with React, TypeScript, Tailwind CSS, and AWS serverless architecture. This is a 4-week intensive project for CENG413 Software Quality Standards course.
+An AI-powered library book recommendation system built with React, TypeScript, Tailwind CSS, and AWS serverless architecture.
+
+![AWS](https://img.shields.io/badge/AWS-Serverless-orange)
+![React](https://img.shields.io/badge/React-19-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ## 🎯 Project Overview
 
-This project provides a **complete frontend starter** with mock data and comprehensive guides for students to implement the AWS serverless backend. Students will learn:
+A full-stack serverless web application that helps users discover and organize books using AI-powered recommendations. Built as part of CENG413 Software Quality Standards course at Istanbul Okan University.
 
-- Modern React development with TypeScript
-- AWS Lambda, DynamoDB, API Gateway
-- User authentication with Amazon Cognito
-- AI integration with Amazon Bedrock
-- Serverless architecture patterns
-- Cloud deployment (S3 + CloudFront)
+### Key Features
 
-**Current Status**: ✅ Frontend complete with mock data | ⏳ Backend to be implemented by students
+- 🤖 **AI-Powered Recommendations** - Personalized book suggestions using Amazon Bedrock (Claude 3 Haiku)
+- 🔐 **Secure Authentication** - User registration and login with AWS Cognito
+- 📖 **Book Catalog** - Browse 290+ books with detailed information and cover images
+- 📝 **Reading Lists** - Create and manage custom reading lists
+- 👨‍💼 **Admin Dashboard** - Book management and user metrics
+- 📱 **Responsive Design** - Mobile-first design with Tailwind CSS
+- ⚡ **Serverless Architecture** - Scalable and cost-effective AWS infrastructure
 
-## 🚀 Features
+**Status**: ✅ Fully Deployed and Operational
 
-- **Modern Tech Stack**: React 19, TypeScript, Vite, Tailwind CSS
-- **AI-Powered Recommendations**: Integration-ready for Amazon Bedrock
-- **User Authentication**: Prepared for AWS Cognito integration
-- **Reading Lists**: Organize and manage book collections
-- **Admin Dashboard**: Book management and metrics
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Type Safety**: Full TypeScript coverage
-- **Testing**: Vitest + React Testing Library setup
-- **Code Quality**: ESLint, Prettier, and strict TypeScript configuration
+## 🏗️ Architecture
 
-## 📋 Prerequisites
+### Frontend
 
-### For Frontend Development (Week 1)
+- **React 19** with TypeScript for type safety
+- **Vite** for fast development and optimized builds
+- **Tailwind CSS** for responsive, modern UI
+- **React Router v7** for client-side routing
+- **AWS Amplify** for Cognito integration
 
-- **Node.js**: 20.x or higher
-- **npm**: 10.x or higher
-- **Git**: For version control
+### Backend (AWS Serverless)
 
-### For AWS Backend Implementation (Week 2-4)
+- **API Gateway** - RESTful API endpoints
+- **Lambda Functions** - Serverless compute (Node.js 20)
+- **DynamoDB** - NoSQL database for books and reading lists
+- **Cognito** - User authentication and authorization
+- **Bedrock** - AI recommendations with Claude 3 Haiku
+- **S3 + CloudFront** - Frontend hosting and CDN
 
-- **AWS Account**: Free Tier eligible
-- **AWS CLI**: Installed and configured
-- **Basic AWS Knowledge**: Lambda, DynamoDB, API Gateway concepts
+### CI/CD Pipeline
 
-## 🚀 Quick Start Guide
+- **CodePipeline** - Automated deployment pipeline
+- **CodeBuild** - Build and test automation
+- **GitHub** - Source control with webhooks
 
-### Step 1: Install Node.js (if not installed)
+## 🌐 Live Demo
 
-```bash
-# Check if Node.js is installed
-node --version
+**Application URL**: https://d1f8toe7p6vzee.cloudfront.net
 
-# Should show v20.x.x or higher
-# If not installed, download from: https://nodejs.org/
+**Admin Test Account**:
+
+- Email: gokcenazgun@gmail.com
+- Password: Naz%12345
+
+> Note: First load may take a few seconds due to CloudFront caching
+
+## 📡 API Endpoints
+
+Base URL: `https://zjw3s40080.execute-api.eu-north-1.amazonaws.com/dev`
+
+### Public Endpoints
+
+- `GET /books` - List all books
+- `GET /books/{id}` - Get book details
+
+### Protected Endpoints (Requires Authentication)
+
+- `GET /reading-lists` - Get user's reading lists
+- `POST /reading-lists` - Create new reading list
+- `PUT /reading-lists/{id}` - Update reading list
+- `DELETE /reading-lists/{id}` - Delete reading list
+- `POST /reading-lists/{id}/books` - Add book to list
+- `DELETE /reading-lists/{id}/books/{bookId}` - Remove book from list
+- `POST /recommendations` - Get AI-powered book recommendations
+
+### Admin Endpoints (Admin Role Required)
+
+- `POST /books` - Add new book
+- `PUT /books/{id}` - Update book
+- `DELETE /books/{id}` - Delete book
+
+## � ️ Tech Stack
+
+### Frontend
+
+- React 19
+- TypeScript 5.9
+- Vite
+- Tailwind CSS
+- React Router DOM v7
+- AWS Amplify
+- Vitest + React Testing Library
+
+### Backend (AWS)
+
+- Lambda (Node.js 20, arm64)
+- DynamoDB
+- API Gateway (REST API)
+- Cognito User Pools
+- Bedrock (Claude 3 Haiku)
+- S3 + CloudFront
+- CodePipeline + CodeBuild
+
+## 📊 Database Schema
+
+### Books Table (DynamoDB)
+
+```
+Partition Key: id (String)
+Attributes:
+- title (String)
+- author (String)
+- genre (String)
+- description (String)
+- coverImage (String)
+- rating (Number)
+- publishedYear (Number)
+- isbn (String)
 ```
 
-### Step 2: Install Dependencies
+### ReadingLists Table (DynamoDB)
+
+```
+Partition Key: userId (String)
+Sort Key: id (String)
+Attributes:
+- name (String)
+- description (String)
+- bookIds (List)
+- createdAt (String)
+- updatedAt (String)
+
+Global Secondary Index: id-index
+- Partition Key: id (String)
+```
+
+## 🚀 Local Development Setup
+
+### Prerequisites
+
+- Node.js 20.x or higher
+- npm 10.x or higher
+- AWS Account (for backend)
+
+### Installation
+
+1. **Clone the repository**
 
 ```bash
+git clone https://github.com/gokcegun01/library-recommendation-system.git
 cd library-recommendation-system
-npm install
-# This will take 2-3 minutes
 ```
 
-### Step 3: Start Development Server
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Configure environment variables**
+
+```bash
+# Create .env file
+cp .env.example .env
+
+# Update with your AWS credentials
+VITE_API_BASE_URL=https://zjw3s40080.execute-api.eu-north-1.amazonaws.com/dev
+VITE_AWS_REGION=eu-north-1
+VITE_COGNITO_USER_POOL_ID=eu-north-1_yJ18dJoDt
+VITE_COGNITO_CLIENT_ID=uetphtuas4n7s4dt16htp1i7b
+VITE_BEDROCK_REGION=us-east-1
+```
+
+4. **Start development server**
 
 ```bash
 npm run dev
 ```
 
-You should see:
+5. **Open in browser**
 
 ```
-  VITE v5.x.x  ready in XXX ms
-  ➜  Local:   http://localhost:5173/
+http://localhost:5173
 ```
 
-### Step 4: Open in Browser
+## 🛠️ Available Commands
 
-Open http://localhost:5173 in your browser.
+```bash
+# Development
+npm run dev              # Start development server
+npm run build            # Build for production
+npm run preview          # Preview production build
 
-You should see the Library Recommendation System homepage! 🎉
+# Code Quality
+npm run lint             # Run ESLint
+npm run format           # Format code with Prettier
 
----
+# Testing
+npm test                 # Run tests
+npm run test:coverage    # Generate coverage report
+```
 
-## 📱 What You're Seeing
+## 🐛 Troubleshooting
 
-Right now, the application is running with **mock data**:
+### Common Issues
 
-- ✅ Books are loaded from `src/services/mockData.ts`
-- ✅ Login/signup is simulated (no real authentication)
-- ✅ Reading lists are stored in browser localStorage
-- ✅ AI recommendations are fake responses
+**Port 5173 already in use**
 
-**This is intentional!** You'll implement the real AWS backend over the next 4 weeks.
+```bash
+lsof -ti:5173 | xargs kill -9
+```
 
-### Explore the Application
+**Module not found errors**
 
-- Browse books (mock data from `src/services/mockData.ts`)
-- Try the login/signup pages (mock authentication)
-- Create reading lists (stored in browser)
-- Test AI recommendations (mock responses)
-- Check the admin panel
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
 
----
+**CORS errors**
 
-## 📅 Week-by-Week Goals
+- Check API Gateway CORS configuration
+- Verify allowed origins include your CloudFront URL
 
-### Week 1: Frontend Exploration (5-7 hours)
+**Authentication fails**
 
-- ✅ Get the app running (you just did this!)
-- ✅ Explore all pages (Books, Recommendations, Reading Lists, Admin)
-- ✅ Understand the code structure
-- ✅ Create AWS account and set up billing alerts
-- ✅ Deploy your first "Hello World" Lambda function
+- Verify Cognito User Pool ID and Client ID in `.env`
+- Check user is verified in Cognito Console
+- Clear browser cache and cookies
 
-### Week 2: Backend API (8-10 hours)
+## � Prokject Highlights
 
-- ✅ Create DynamoDB tables (Books, ReadingLists)
-- ✅ Deploy Lambda functions for Books API
-- ✅ Deploy Lambda functions for Reading Lists API
-- ✅ Set up API Gateway
-- ✅ Connect frontend to real API
+### Implemented Features
 
-### Week 3: Authentication (6-8 hours)
+- ✅ 290+ books in catalog with cover images
+- ✅ User authentication with email verification
+- ✅ AI-powered book recommendations using Claude 3 Haiku
+- ✅ Personal reading lists with CRUD operations
+- ✅ Admin dashboard for book management
+- ✅ Responsive design for mobile and desktop
+- ✅ Real-time search and filtering
+- ✅ Secure API with JWT authentication
+- ✅ Automated CI/CD pipeline
+- ✅ ~75% test coverage
 
-- ✅ Create Cognito User Pool
-- ✅ Install and configure AWS Amplify
-- ✅ Implement real login/signup
-- ✅ Add authentication to API calls
-- ✅ Protect API endpoints
+### AWS Services Used
 
-### Week 4: AI & Deployment (8-10 hours)
+- **Lambda**: 8 serverless functions
+- **DynamoDB**: 2 tables (Books, ReadingLists)
+- **API Gateway**: RESTful API with CORS
+- **Cognito**: User pool with 50K MAU free tier
+- **Bedrock**: Claude 3 Haiku for AI recommendations
+- **S3**: Static website hosting
+- **CloudFront**: CDN for global distribution
+- **CodePipeline**: Automated deployments
+- **CloudWatch**: Logging and monitoring
 
-- ✅ Enable Amazon Bedrock
-- ✅ Deploy AI recommendations Lambda
-- ✅ Deploy frontend to S3 + CloudFront
-- ✅ End-to-end testing
-- ✅ Final polish and documentation
+### Cost Optimization
 
-**See [PROJECT_TIMELINE_4WEEKS.md](../PROJECT_TIMELINE_4WEEKS.md) for detailed weekly breakdown.**
+- **Monthly Cost**: $0-5 USD (within AWS Free Tier)
+- Lambda arm64 architecture for better performance
+- DynamoDB on-demand pricing
+- CloudFront caching for reduced API calls
+- Optimized bundle size with code splitting
 
 ---
 
@@ -196,84 +325,31 @@ npm run build
 1. Check that `src/index.css` exists
 2. Restart dev server: `Ctrl+C` then `npm run dev`
 
----
-
 ## 📂 Project Structure
 
 ```
 library-recommendation-system/
 ├── src/
-│   ├── components/       # Reusable UI components
-│   │   ├── common/       # Button, Card, Input, Modal, etc.
-│   │   ├── layout/       # Header, Footer, Navigation
-│   │   └── books/        # BookCard, BookGrid, BookSearch
-│   ├── pages/            # Page components (Home, Books, etc.)
-│   ├── services/         # API calls and mock data
-│   │   ├── api.ts        # ⚠️ TODOs for AWS implementation
-│   │   └── mockData.ts   # ⚠️ Mock data (will be replaced)
-│   ├── contexts/         # React Context (Auth)
-│   ├── hooks/            # Custom React hooks
-│   ├── types/            # TypeScript interfaces
-│   └── utils/            # Helper functions
-├── public/               # Static assets
-├── IMPLEMENTATION_GUIDE.md  # 📖 Step-by-step AWS guide
-├── STUDENT_CHECKLIST.md     # ✅ Progress tracking
-└── README.md                # This file
+│   ├── components/
+│   │   ├── common/          # Reusable UI (Button, Card, Input, Modal)
+│   │   ├── layout/          # Header, Footer, Navigation
+│   │   └── books/           # BookCard, BookGrid, BookSearch
+│   ├── pages/               # Route components
+│   ├── contexts/            # React Context (Auth, Toast)
+│   ├── hooks/               # Custom hooks
+│   ├── services/            # API layer
+│   ├── types/               # TypeScript definitions
+│   ├── utils/               # Helper functions
+│   └── tests/               # Test files
+├── public/                  # Static assets
+└── buildspec.yml            # CodeBuild configuration
 ```
 
----
+## 📚 Documentation
 
-## 🎯 Next Steps
-
-1. ✅ **Explore the app** - Click around, try all features
-2. ✅ **Read the code** - Start with `src/App.tsx` and follow the imports
-3. ✅ **Check TODOs** - Look at `src/services/api.ts` to see what you'll implement
-4. ✅ **Create AWS account** - You'll need this for Week 2
-5. ✅ **Read IMPLEMENTATION_GUIDE.md** - Familiarize yourself with Week 1 tasks
-
----
-
-## 💡 Tips for Success
-
-1. **Start early** - Don't wait until the last day of each week
-2. **Test frequently** - Test each Lambda function as you create it
-3. **Commit often** - Make small commits with clear messages
-4. **Read documentation** - AWS docs are comprehensive and helpful
-5. **Work together** - Pair program on complex features
-6. **Stay in Free Tier** - Monitor AWS costs to avoid charges
-7. **Ask questions** - No question is too simple
-
----
-
-## 🆘 Getting Help
-
-### Documentation
-
-- **[IMPLEMENTATION_GUIDE.md](./IMPLEMENTATION_GUIDE.md)** - Detailed AWS implementation steps
-- **[PROJECT_TIMELINE_4WEEKS.md](../PROJECT_TIMELINE_4WEEKS.md)** - Weekly goals and tasks
-- **[STUDENT_CHECKLIST.md](./STUDENT_CHECKLIST.md)** - Progress tracking
-- **[RESOURCES.md](./RESOURCES.md)** - Links to all official documentation
-- **[AWS_FREE_TIER_SETUP.md](../AWS_FREE_TIER_SETUP.md)** - Complete AWS account setup guide
-
-### Code TODOs
-
-Search for `TODO:` in the code to find implementation points:
-
-```bash
-grep -r "TODO:" src/
-```
-
-### Getting Stuck?
-
-1. Read error messages carefully
-2. Check AWS CloudWatch Logs
-3. Search the error on Google/Stack Overflow
-4. Ask in team chat
-5. Use office hours
-
----
-
-**Ready to implement AWS backend? Check out [IMPLEMENTATION_GUIDE.md](./IMPLEMENTATION_GUIDE.md)** 🚀
+- **[IMPLEMENTATION_GUIDE.md](./IMPLEMENTATION_GUIDE.md)** - AWS implementation guide
+- **[STUDENT_CHECKLIST.md](./STUDENT_CHECKLIST.md)** - Project checklist
+- **[RESOURCES.md](./RESOURCES.md)** - Additional resources
 
 ## 📜 Available Scripts
 
@@ -664,22 +740,26 @@ npm run build
 - [Cognito Guide](https://docs.aws.amazon.com/cognito/)
 - [Bedrock Guide](https://docs.aws.amazon.com/bedrock/)
 
-## 🎓 Learning Objectives
+## 🎓 Learning Outcomes
 
-By completing this project, students will:
+This project demonstrates:
 
-- ✅ Build production-ready React applications with TypeScript
-- ✅ Implement serverless architecture with AWS Lambda
-- ✅ Design NoSQL databases with DynamoDB
-- ✅ Secure applications with Cognito authentication
-- ✅ Integrate AI/ML services with Amazon Bedrock
-- ✅ Deploy full-stack applications to AWS
-- ✅ Follow software quality standards and best practices
-- ✅ Work in agile teams with version control
+- ✅ Full-stack serverless application development
+- ✅ AWS cloud architecture and best practices
+- ✅ Modern React development with TypeScript
+- ✅ RESTful API design and implementation
+- ✅ NoSQL database design with DynamoDB
+- ✅ User authentication and authorization
+- ✅ AI/ML integration with Amazon Bedrock
+- ✅ CI/CD pipeline implementation
+- ✅ Responsive web design
+- ✅ Software quality standards and testing
 
-## 🤝 Contributing
+## 👥 Team
 
-This is a student project for CENG413 Software Quality Standards course. Follow the project guidelines and coding standards defined in `.kiro/steering/` files.
+**Course**: CENG413 - Software Quality Standards  
+**University**: Istanbul Okan University  
+**Semester**: Fall 2024
 
 ## 📄 License
 
@@ -688,7 +768,3 @@ This project is part of an academic course at Istanbul Okan University.
 ---
 
 **Built with ❤️ for CENG413 - Software Quality Standards**
-
-**Project Type**: 4-week intensive, beginner-friendly, AWS serverless  
-**Status**: Frontend complete ✅ | Backend implementation guides ready ✅  
-**Next Step**: [QUICK_START.md](./QUICK_START.md) 🚀
