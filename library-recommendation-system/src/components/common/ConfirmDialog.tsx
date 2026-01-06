@@ -20,7 +20,7 @@ interface ConfirmDialogProps {
  *   isOpen={isOpen}
  *   onClose={() => setIsOpen(false)}
  *   onConfirm={handleDelete}
- *   title="Silmek istediğinizden emin misiniz?"
+ *   title="Are you sure you want to delete?"
  *   message="Bu işlem geri alınamaz."
  * />
  */
@@ -30,8 +30,8 @@ export function ConfirmDialog({
   onConfirm,
   title,
   message,
-  confirmText = 'Evet',
-  cancelText = 'İptal',
+  confirmText = 'Yes',
+  cancelText = 'Cancel',
   confirmVariant = 'danger',
 }: ConfirmDialogProps) {
   const handleConfirm = () => {

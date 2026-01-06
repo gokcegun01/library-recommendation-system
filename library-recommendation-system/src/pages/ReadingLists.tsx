@@ -82,13 +82,13 @@ export function ReadingLists() {
   const handleDeleteList = async (listId: string, listName: string) => {
     setConfirmDialog({
       isOpen: true,
-      title: 'Listeyi Sil',
-      message: `"${listName}" reading listini silmek istediğinizden emin misiniz?`,
+      title: 'Delete List',
+      message: `Are you sure you want to delete the "${listName}" reading list?`,
       onConfirm: async () => {
         try {
           await deleteReadingList(listId);
           setLists(lists.filter((list) => list.id !== listId));
-          showToast('Reading list başarıyla silindi!', 'success');
+          showToast('Reading list deleted successfully!', 'success');
         } catch (error) {
           handleApiError(error);
         }
@@ -105,16 +105,16 @@ export function ReadingLists() {
 
     setConfirmDialog({
       isOpen: true,
-      title: 'Kitabı Çıkar',
-      message: `"${bookTitle}" kitabını bu listeden çıkarmak istediğinizden emin misiniz?`,
+      title: 'Remove Book',
+      message: `Are you sure you want to remove "${bookTitle}" from this list?`,
       onConfirm: async () => {
         console.log('Confirm clicked'); // DEBUG
         try {
           // Önce UI'ı güncelle (optimistic update)
           setSelectedListBooks((prevBooks) => prevBooks.filter((book) => book.id !== bookId));
 
-          // Toast'u hemen göster
-          showToast('Kitap listeden çıkarılıyor...', 'info');
+          // Show toast immediately
+          showToast('Removing book from list...', 'info');
 
           // API çağrısını yap
           const updatedList = await removeBookFromReadingList(currentList.id, bookId);
@@ -127,12 +127,12 @@ export function ReadingLists() {
             prevLists.map((list) => (list.id === updatedList.id ? updatedList : list))
           );
 
-          // Başarı mesajı
-          showToast('Kitap listeden çıkarıldı!', 'success');
+          // Success message
+          showToast('Book removed from list!', 'success');
         } catch (error) {
           console.error('Error removing book:', error);
-          // Hata durumunda kitabı geri ekle
-          showToast('Kitap çıkarılamadı!', 'error');
+          // Restore book on error
+          showToast('Failed to remove book!', 'error');
           // Listeyi yeniden yükle
           if (currentList) {
             handleListClick(currentList);
@@ -257,8 +257,8 @@ export function ReadingLists() {
           onConfirm={confirmDialog.onConfirm}
           title={confirmDialog.title}
           message={confirmDialog.message}
-          confirmText="Evet, Sil"
-          cancelText="İptal"
+          confirmText="Yes, Delete"
+          cancelText="Cancel"
           confirmVariant="danger"
         />
       </div>
@@ -384,8 +384,8 @@ export function ReadingLists() {
         onConfirm={confirmDialog.onConfirm}
         title={confirmDialog.title}
         message={confirmDialog.message}
-        confirmText="Evet, Sil"
-        cancelText="İptal"
+        confirmText="Yes, Delete"
+        cancelText="Cancel"
         confirmVariant="danger"
       />
     </div>

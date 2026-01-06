@@ -1,21 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/common/Button';
-import { useState, useEffect } from 'react';
-import { getBooks } from '@/services/api';
 
 /**
  * Modern Home page with stunning gradients and animations
  */
 export function Home() {
-  const [bookCount, setBookCount] = useState(200); // Default fallback
-
-  useEffect(() => {
-    // Fetch actual book count
-    getBooks()
-      .then((books) => setBookCount(books.length))
-      .catch(() => setBookCount(200)); // Fallback on error
-  }, []);
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -66,9 +55,7 @@ export function Home() {
           {/* Stats */}
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="glass-dark rounded-2xl p-6">
-              <div className="text-4xl font-bold text-white mb-2">
-                {bookCount.toLocaleString()}+
-              </div>
+              <div className="text-4xl font-bold text-white mb-2">200+</div>
               <div className="text-slate-300">Books Available</div>
             </div>
             <div className="glass-dark rounded-2xl p-6">

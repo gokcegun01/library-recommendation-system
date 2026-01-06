@@ -83,7 +83,7 @@ export function Header() {
               </>
             ) : (
               <>
-                <span className="text-slate-700 font-semibold">{user?.email}</span>
+                <span className="text-slate-700 font-semibold">{user?.name}</span>
                 <button
                   onClick={logout}
                   className="text-slate-700 hover:text-violet-600 transition-colors font-semibold px-4 py-2 rounded-lg hover:bg-violet-50"
@@ -141,9 +141,7 @@ export function Header() {
                 </>
               ) : (
                 <>
-                  <span className="block text-slate-700 font-semibold py-2 px-4">
-                    {user?.email}
-                  </span>
+                  <span className="block text-slate-700 font-semibold py-2 px-4">{user?.name}</span>
                   <button
                     onClick={logout}
                     className="block text-slate-700 hover:text-violet-600 transition-colors py-2 px-4 rounded-lg hover:bg-violet-50 font-semibold w-full text-left"

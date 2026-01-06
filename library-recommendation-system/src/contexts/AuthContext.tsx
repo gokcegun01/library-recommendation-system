@@ -44,7 +44,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           setUser({
             id: currentUser.userId,
             email: attributes.email,
-            name: attributes.name || attributes.email,
+            name: attributes.name || attributes.email.split('@')[0],
             role: isAdmin ? 'admin' : 'user',
           });
         } else {
