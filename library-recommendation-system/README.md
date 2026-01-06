@@ -25,7 +25,93 @@ A full-stack serverless web application that helps users discover and organize b
 
 ## 🏗️ Architecture
 
-### Frontend
+### System Architecture Diagram
+
+```mermaid
+graph TB
+    subgraph "Client Layer"
+        User[👤 User Browser]
+    end
+
+    subgraph "AWS Cloud"
+        subgraph "Frontend - CDN"
+            CF[☁️ CloudFront<br/>CDN Distribution]
+            S3[📦 S3 Bucket<br/>Static Website]
+        end
+
+        subgraph "API Layer"
+            APIG[🚪 API Gateway<br/>REST API]
+        end
+
+        subgraph "Authentication"
+            Cognito[🔐 Cognito<br/>User Pool]
+        end
+
+        subgraph "Compute Layer"
+            Lambda1[⚡ Lambda<br/>Get Books]
+            Lambda2[⚡ Lambda<br/>Get Book Details]
+            Lambda3[⚡ Lambda<br/>Reading Lists CRUD]
+            Lambda4[⚡ Lambda<br/>AI Recommendations]
+            Lambda5[⚡ Lambda<br/>Admin Functions]
+        end
+
+        subgraph "Data Layer"
+            DDB1[(📊 DynamoDB<br/>Books Table)]
+            DDB2[(📊 DynamoDB<br/>ReadingLists Table)]
+        end
+
+        subgraph "AI Layer"
+            Bedrock[🤖 Amazon Bedrock<br/>Claude 3 Haiku]
+        end
+
+        subgraph "CI/CD"
+            GitHub[📁 GitHub<br/>Source Code]
+            Pipeline[🔄 CodePipeline]
+            Build[🔨 CodeBuild]
+        end
+    end
+
+    User -->|HTTPS| CF
+    CF --> S3
+    User -->|API Calls| APIG
+    APIG -->|Auth| Cognito
+    APIG --> Lambda1
+    APIG --> Lambda2
+    APIG --> Lambda3
+    APIG --> Lambda4
+    APIG --> Lambda5
+
+    Lambda1 --> DDB1
+    Lambda2 --> DDB1
+    Lambda3 --> DDB2
+    Lambda4 --> Bedrock
+    Lambda5 --> DDB1
+
+    GitHub -->|Webhook| Pipeline
+    Pipeline --> Build
+    Build -->|Deploy| S3
+
+    style User fill:#e1f5ff
+    style CF fill:#ff9900
+    style S3 fill:#ff9900
+    style APIG fill:#ff9900
+    style Cognito fill:#ff9900
+    style Lambda1 fill:#ff9900
+    style Lambda2 fill:#ff9900
+    style Lambda3 fill:#ff9900
+    style Lambda4 fill:#ff9900
+    style Lambda5 fill:#ff9900
+    style DDB1 fill:#4053d6
+    style DDB2 fill:#4053d6
+    style Bedrock fill:#00a1c9
+    style GitHub fill:#24292e
+    style Pipeline fill:#ff9900
+    style Build fill:#ff9900
+```
+
+### Technology Stack
+
+#### Frontend
 
 - **React 19** with TypeScript for type safety
 - **Vite** for fast development and optimized builds
@@ -33,16 +119,16 @@ A full-stack serverless web application that helps users discover and organize b
 - **React Router v7** for client-side routing
 - **AWS Amplify** for Cognito integration
 
-### Backend (AWS Serverless)
+#### Backend (AWS Serverless)
 
 - **API Gateway** - RESTful API endpoints
-- **Lambda Functions** - Serverless compute (Node.js 20)
+- **Lambda Functions** - Serverless compute (Node.js 20, arm64)
 - **DynamoDB** - NoSQL database for books and reading lists
 - **Cognito** - User authentication and authorization
 - **Bedrock** - AI recommendations with Claude 3 Haiku
 - **S3 + CloudFront** - Frontend hosting and CDN
 
-### CI/CD Pipeline
+#### CI/CD Pipeline
 
 - **CodePipeline** - Automated deployment pipeline
 - **CodeBuild** - Build and test automation
