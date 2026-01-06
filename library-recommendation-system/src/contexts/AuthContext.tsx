@@ -1,157 +1,100 @@
-/* eslint-disable react-refresh/only-export-components */
-import React, { createContext, useState, useEffect } from 'react';
-import { User } from '@/types';
+import { useEffect, useState, ReactNode } from 'react';
+import {
+  signIn,
+  signOut,
+  signUp,
+  getCurrentUser,
+  fetchUserAttributes,
+  fetchAuthSession,
+} from 'aws-amplify/auth';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext, User } from './auth';
 
-/**
- * Authentication context type definition
- */
-export interface AuthContextType {
-  user: User | null;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => Promise<void>;
-  signup: (email: string, password: string, name: string) => Promise<void>;
-}
-
-/**
- * Authentication context
- */
-export const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
-/**
- * AuthProvider component props
- */
-interface AuthProviderProps {
-  children: React.ReactNode;
-}
-
-/**
- * ============================================================================
- * AUTHENTICATION CONTEXT - AWS COGNITO INTEGRATION
- * ============================================================================
- *
- * ⚠️ IMPORTANT: This file currently uses MOCK authentication with localStorage.
- *
- * TO IMPLEMENT AWS COGNITO:
- * Follow Week 3 in IMPLEMENTATION_GUIDE.md
- *
- * ============================================================================
- * IMPLEMENTATION CHECKLIST:
- * ============================================================================
- *
- * [ ] Week 3, Day 1-2: Create Cognito User Pool in AWS Console
- * [ ] Week 3, Day 1-2: Note User Pool ID and App Client ID
- * [ ] Week 3, Day 1-2: Update .env file with Cognito credentials
- * [ ] Week 3, Day 3-4: Install AWS Amplify: npm install aws-amplify
- * [ ] Week 3, Day 3-4: Configure Amplify in src/main.tsx (see below)
- * [ ] Week 3, Day 3-4: Import Cognito functions at top of this file
- * [ ] Week 3, Day 3-4: Replace login() function with Cognito signIn
- * [ ] Week 3, Day 3-4: Replace logout() function with Cognito signOut
- * [ ] Week 3, Day 3-4: Replace signup() function with Cognito signUp
- * [ ] Week 3, Day 3-4: Update useEffect to check Cognito session
- * [ ] Week 3, Day 3-4: Remove localStorage mock code
- * [ ] Week 3, Day 3-4: Test registration and login flow
- *
- * ============================================================================
- * STEP 1: Configure Amplify in src/main.tsx
- * ============================================================================
- *
- * Add this code BEFORE ReactDOM.createRoot():
- *
- * import { Amplify } from 'aws-amplify';
- *
- * Amplify.configure({
- *   Auth: {
- *     Cognito: {
- *       userPoolId: import.meta.env.VITE_COGNITO_USER_POOL_ID,
- *       userPoolClientId: import.meta.env.VITE_COGNITO_CLIENT_ID,
- *     }
- *   }
- * });
- *
- * ============================================================================
- * STEP 2: Import Cognito functions at top of this file
- * ============================================================================
- *
- * import { signIn, signUp, signOut, getCurrentUser } from 'aws-amplify/auth';
- *
- * ============================================================================
- * STEP 3: Replace mock functions below with Cognito implementations
- * ============================================================================
- *
- * See detailed code in IMPLEMENTATION_GUIDE.md - Week 3, Day 3-4
- *
- * Documentation: https://docs.amplify.aws/lib/auth/getting-started/q/platform/js/
- *
- * ============================================================================
- */
-export function AuthProvider({ children }: AuthProviderProps) {
+export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // TODO: Replace with Cognito session check in Week 3, Day 3-4
-    //
-    // Implementation:
-    // const checkAuth = async () => {
-    //   try {
-    //     const user = await getCurrentUser();
-    //     setUser({
-    //       id: user.userId,
-    //       email: user.signInDetails?.loginId || '',
-    //       name: user.username,
-    //       role: 'user',
-    //       createdAt: new Date().toISOString()
-    //     });
-    //   } catch {
-    //     setUser(null);
-    //   } finally {
-    //     setIsLoading(false);
-    //   }
-    // };
-    // checkAuth();
-
-    // MOCK: Check localStorage for development
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-    setIsLoading(false);
+    checkUser();
   }, []);
 
-  const login = async (email: string, password: string) => {
-    setIsLoading(true);
+  const checkUser = async () => {
     try {
-      // TODO: Replace with Cognito Auth.signIn(email, password)
-      // Mock implementation for development
-      void password; // Will be used with Cognito
-      const mockUser: User = {
-        id: '1',
-        email,
-        name: 'John Doe',
-        role: 'user',
-        createdAt: new Date().toISOString(),
-      };
-      setUser(mockUser);
-      localStorage.setItem('user', JSON.stringify(mockUser));
+      const currentUser = await getCurrentUser();
+      const attributes = await fetchUserAttributes();
+      const session = await fetchAuthSession();
+
+      console.log('Current user:', currentUser);
+      console.log('User attributes:', attributes);
+
+      // Set user if they exist and are verified
+      if (currentUser && attributes.email) {
+        // Check if email is verified (Cognito returns string 'true')
+        const isEmailVerified = attributes.email_verified === 'true';
+
+        if (isEmailVerified) {
+          // Check if user is in admin group
+          const groups = session.tokens?.idToken?.payload['cognito:groups'] as string[] | undefined;
+          const isAdmin = groups?.includes('admin') || false;
+
+          console.log('User groups:', groups);
+          console.log('Is admin:', isAdmin);
+
+          setUser({
+            id: currentUser.userId,
+            email: attributes.email,
+            name: attributes.name || attributes.email,
+            role: isAdmin ? 'admin' : 'user',
+          });
+        } else {
+          console.log('Email not verified, user needs to verify');
+          setUser(null);
+        }
+      } else {
+        setUser(null);
+      }
     } catch (error) {
-      console.error('Login error:', error);
-      throw error;
+      console.log('No authenticated user:', error);
+      setUser(null);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const logout = async () => {
+  const login = async (email: string, password: string) => {
     setIsLoading(true);
     try {
-      // TODO: Replace with Cognito Auth.signOut()
-      setUser(null);
-      localStorage.removeItem('user');
-    } catch (error) {
-      console.error('Logout error:', error);
-      throw error;
+      // First check if user is already signed in
+      try {
+        const currentUser = await getCurrentUser();
+        if (currentUser) {
+          console.log('User already signed in, signing out first');
+          await signOut();
+        }
+      } catch {
+        // No user signed in, continue with login
+      }
+
+      const res = await signIn({
+        username: email,
+        password,
+      });
+
+      console.log('Sign in result:', res);
+
+      // Check if user needs to confirm signup
+      if (res.nextStep?.signInStep === 'CONFIRM_SIGN_UP') {
+        navigate('/verify', { state: { email } });
+        return;
+      }
+
+      // Successful login - check user and navigate
+      await checkUser();
+      navigate('/');
+    } catch (err) {
+      console.error('Login error:', err);
+      throw err;
     } finally {
       setIsLoading(false);
     }
@@ -160,34 +103,52 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const signup = async (email: string, password: string, name: string) => {
     setIsLoading(true);
     try {
-      // TODO: Replace with Cognito Auth.signUp
-      // Mock implementation for development
-      void password; // Will be used with Cognito
-      const mockUser: User = {
-        id: '1',
-        email,
-        name,
-        role: 'user',
-        createdAt: new Date().toISOString(),
-      };
-      setUser(mockUser);
-      localStorage.setItem('user', JSON.stringify(mockUser));
-    } catch (error) {
-      console.error('Signup error:', error);
-      throw error;
+      await signUp({
+        username: email,
+        password,
+        options: {
+          userAttributes: {
+            email,
+            name,
+          },
+        },
+      });
+
+      // Navigate to verification page after successful signup
+      navigate('/verify', { state: { email } });
+    } catch (err) {
+      console.error('Signup error:', err);
+      throw err;
     } finally {
       setIsLoading(false);
     }
   };
 
-  const value: AuthContextType = {
-    user,
-    isAuthenticated: !!user,
-    isLoading,
-    login,
-    logout,
-    signup,
+  const logout = async () => {
+    try {
+      await signOut();
+      setUser(null);
+      navigate('/login');
+    } catch (err) {
+      console.error('Logout error:', err);
+      // Even if signOut fails, clear local state
+      setUser(null);
+      navigate('/login');
+    }
   };
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider
+      value={{
+        user,
+        isAuthenticated: !!user,
+        isLoading,
+        login,
+        signup,
+        logout,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
 }

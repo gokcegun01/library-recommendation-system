@@ -1,0 +1,1702 @@
+{
+  "Books": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "101" },
+          "title": { "S": "The Girl with the Dragon Tattoo" },
+          "author": { "S": "Stieg Larsson" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Harriet Vanger, a scion of one of Sweden's wealthiest families disappeared over forty years ago. All these years later, her aged uncle continues to seek the truth."
+          },
+          "coverImage": { "S": "/book-covers/dragon-tattoo.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2005" },
+          "isbn": { "S": "978-0307454546" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "102" },
+          "title": { "S": "In the Woods" },
+          "author": { "S": "Tana French" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "As dusk approaches a small Dublin suburb in the summer of 1984, mothers begin to call their children home. But on this warm evening, three children do not return from the dark and silent woods."
+          },
+          "coverImage": { "S": "/book-covers/in-woods.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2007" },
+          "isbn": { "S": "978-0143113492" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "103" },
+          "title": { "S": "The Cuckoo's Calling" },
+          "author": { "S": "Robert Galbraith" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "After losing his leg to a land mine in Afghanistan, Cormoran Strike is barely scraping by as a private investigator. Then John Bristow walks through his door with an amazing story."
+          },
+          "coverImage": { "S": "/book-covers/cuckoos-calling.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2013" },
+          "isbn": { "S": "978-0316206846" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "104" },
+          "title": { "S": "The Snowman" },
+          "author": { "S": "Jo Nesbø" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "One night, after the first snowfall of the year, a boy named Jonas wakes up and discovers that his mother has disappeared. Only one trace of her remains: a pink scarf, his Christmas gift to her, now worn by the snowman that inexplicably appeared in their yard earlier that day."
+          },
+          "coverImage": { "S": "/book-covers/snowman.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2007" },
+          "isbn": { "S": "978-0307742841" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "105" },
+          "title": { "S": "The Reversal" },
+          "author": { "S": "Michael Connelly" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Longtime defense attorney Mickey Haller is recruited to change stripes and prosecute the high-profile retrial of a brutal child murder."
+          },
+          "coverImage": { "S": "/book-covers/reversal.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2010" },
+          "isbn": { "S": "978-0316069519" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "106" },
+          "title": { "S": "The Poet" },
+          "author": { "S": "Michael Connelly" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Death is reporter Jack McEvoy's beat: his calling, his obsession. But this time, death brings McEvoy the story he never wanted to write—and the mystery he desperately needs to solve."
+          },
+          "coverImage": { "S": "/book-covers/poet.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1996" },
+          "isbn": { "S": "978-0446674409" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "107" },
+          "title": { "S": "The Dry" },
+          "author": { "S": "Jane Harper" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "After getting a note demanding his presence, Federal Agent Aaron Falk arrives in his hometown for the first time in decades to attend the funeral of his best friend, Luke."
+          },
+          "coverImage": { "S": "/book-covers/dry.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2016" },
+          "isbn": { "S": "978-1250105608" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "108" },
+          "title": { "S": "The Couple Next Door" },
+          "author": { "S": "Shari Lapena" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Your neighbour told you that she didn't want your six-month-old daughter at the dinner party. Nothing personal, she just couldn't stand her crying. Your husband said it would be fine. After all, you only live next door."
+          },
+          "coverImage": { "S": "/book-covers/couple-next-door.jpg" },
+          "rating": { "N": "4.1" },
+          "publishedYear": { "N": "2016" },
+          "isbn": { "S": "978-0735221086" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "109" },
+          "title": { "S": "The Guest List" },
+          "author": { "S": "Lucy Foley" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "On an island off the coast of Ireland, guests gather to celebrate two people joining their lives together as one. The groom: handsome and charming, a rising television star. The bride: smart and ambitious, a magazine publisher."
+          },
+          "coverImage": { "S": "/book-covers/guest-list.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2020" },
+          "isbn": { "S": "978-0062868930" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "110" },
+          "title": { "S": "The Hunting Party" },
+          "author": { "S": "Lucy Foley" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "During the languid days of the Christmas break, a group of thirtysomething friends from Oxford meet to welcome in the New Year together, a tradition they began as students ten years ago."
+          },
+          "coverImage": { "S": "/book-covers/hunting-party.jpg" },
+          "rating": { "N": "4.0" },
+          "publishedYear": { "N": "2019" },
+          "isbn": { "S": "978-0062868909" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "111" },
+          "title": { "S": "The Hating Game" },
+          "author": { "S": "Sally Thorne" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Lucy Hutton and Joshua Templeman hate each other. Not dislike. Not begrudgingly tolerate. Hate. And they have no problem displaying their feelings through a series of ritualistic passive aggressive maneuvers."
+          },
+          "coverImage": { "S": "/book-covers/hating-game.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2016" },
+          "isbn": { "S": "978-0062439598" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "112" },
+          "title": { "S": "The Kiss Quotient" },
+          "author": { "S": "Helen Hoang" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Stella Lane thinks math is the only thing that unites the universe. She comes up with algorithms to predict customer purchases. Her love life? That's a different story."
+          },
+          "coverImage": { "S": "/book-covers/kiss-quotient.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-0451490803" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "113" },
+          "title": { "S": "The Flatshare" },
+          "author": { "S": "Beth O'Leary" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Tiffy and Leon share a flat. Tiffy and Leon have never met. Tiffy Moore needs a cheap flat, and fast. Leon Twomey works nights and needs cash."
+          },
+          "coverImage": { "S": "/book-covers/flatshare.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2019" },
+          "isbn": { "S": "978-1250295620" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "114" },
+          "title": { "S": "The Spanish Love Deception" },
+          "author": { "S": "Elena Armas" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Catalina Martín desperately needs a date to her sister's wedding. Especially since her little white lie about her American boyfriend has spiralled out of control."
+          },
+          "coverImage": { "S": "/book-covers/spanish-love.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2021" },
+          "isbn": { "S": "978-1668003770" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "115" },
+          "title": { "S": "The Love Hypothesis" },
+          "author": { "S": "Ali Hazelwood" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "As a third-year Ph.D. candidate, Olive Smith doesn't believe in lasting romantic relationships but her best friend does, and that's what got her into this situation."
+          },
+          "coverImage": { "S": "/book-covers/love-hypothesis.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2021" },
+          "isbn": { "S": "978-0593336823" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "116" },
+          "title": { "S": "Book Lovers" },
+          "author": { "S": "Emily Henry" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Nora Stephens' life is books—she's read them all—and she is not that type of heroine. Not the plucky one, not the laidback dream girl, and especially not the sweetheart."
+          },
+          "coverImage": { "S": "/book-covers/book-lovers.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2022" },
+          "isbn": { "S": "978-0593334836" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "117" },
+          "title": { "S": "It Ends with Us" },
+          "author": { "S": "Colleen Hoover" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Lily hasn't always had it easy, but that's never stopped her from working hard for the life she wants. She's come a long way from the small town in Maine where she grew up."
+          },
+          "coverImage": { "S": "/book-covers/ends-with-us.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "2016" },
+          "isbn": { "S": "978-1501110368" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "118" },
+          "title": { "S": "Verity" },
+          "author": { "S": "Colleen Hoover" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Lowen Ashleigh is a struggling writer on the brink of financial ruin when she accepts the job offer of a lifetime. Jeremy Crawford, husband of bestselling author Verity Crawford, has hired Lowen to complete the remaining books in a successful series his injured wife is unable to finish."
+          },
+          "coverImage": { "S": "/book-covers/verity.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-1791392796" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "119" },
+          "title": { "S": "The Time Traveler's Wife" },
+          "author": { "S": "Audrey Niffenegger" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "This is the extraordinary love story of Clare and Henry who met when Clare was six and Henry was thirty-six, and were married when Clare was twenty-two and Henry was thirty."
+          },
+          "coverImage": { "S": "/book-covers/time-travelers-wife.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2003" },
+          "isbn": { "S": "978-015602943" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "120" },
+          "title": { "S": "The Rosie Project" },
+          "author": { "S": "Graeme Simsion" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Don Tillman, professor of genetics, has never been on a second date. He is a man who can count all his friends on the fingers of one hand, whose lifelong difficulty with social rituals has convinced him that he is simply not wired for romance."
+          },
+          "coverImage": { "S": "/book-covers/rosie-project.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2013" },
+          "isbn": { "S": "978-1476729091" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "121" },
+          "title": { "S": "The Three-Body Problem" },
+          "author": { "S": "Liu Cixin" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "Set against the backdrop of China's Cultural Revolution, a secret military project sends signals into space to establish contact with aliens."
+          },
+          "coverImage": { "S": "/book-covers/three-body.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2008" },
+          "isbn": { "S": "978-0765382030" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "122" },
+          "title": { "S": "Hyperion" },
+          "author": { "S": "Dan Simmons" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "On the world called Hyperion, beyond the law of the Hegemony of Man, there waits the creature called the Shrike. There are those who worship it. There are those who fear it. And there are those who have vowed to destroy it."
+          },
+          "coverImage": { "S": "/book-covers/hyperion.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1989" },
+          "isbn": { "S": "978-0553283686" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "123" },
+          "title": { "S": "Old Man's War" },
+          "author": { "S": "John Scalzi" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "John Perry did two things on his 75th birthday. First he visited his wife's grave. Then he joined the army."
+          },
+          "coverImage": { "S": "/book-covers/old-mans-war.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2005" },
+          "isbn": { "S": "978-0765348272" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "124" },
+          "title": { "S": "Ancillary Justice" },
+          "author": { "S": "Ann Leckie" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "On a remote, icy planet, the soldier known as Breq is drawing closer to completing her quest. Once, she was the Justice of Toren—a colossal starship with an artificial intelligence linking thousands of soldiers in the service of the Radch."
+          },
+          "coverImage": { "S": "/book-covers/ancillary-justice.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2013" },
+          "isbn": { "S": "978-0316246620" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "125" },
+          "title": { "S": "The Expanse: Leviathan Wakes" },
+          "author": { "S": "James S.A. Corey" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "Humanity has colonized the solar system—Mars, the Moon, the Asteroid Belt and beyond—but the stars are still out of our reach."
+          },
+          "coverImage": { "S": "/book-covers/leviathan-wakes.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2011" },
+          "isbn": { "S": "978-0316129084" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "126" },
+          "title": { "S": "Altered Carbon" },
+          "author": { "S": "Richard K. Morgan" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "In the twenty-fifth century, humankind has spread throughout the galaxy, monitored by the watchful eye of the U.N. While divisions in race, religion, and class still exist, advances in technology have redefined life itself."
+          },
+          "coverImage": { "S": "/book-covers/altered-carbon.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2002" },
+          "isbn": { "S": "978-0345457684" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "127" },
+          "title": { "S": "The Forever War" },
+          "author": { "S": "Joe Haldeman" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "The Earth's leaders have drawn a line in the interstellar sand—despite the fact that the fierce alien enemy they would oppose is inscrutable, unconquerable, and very far away."
+          },
+          "coverImage": { "S": "/book-covers/forever-war.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1974" },
+          "isbn": { "S": "978-0312536633" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "128" },
+          "title": { "S": "Ringworld" },
+          "author": { "S": "Larry Niven" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "Pierson's puppeteers, strange, three-legged, two-headed aliens, have discovered an immense structure in a hitherto unexplored part of the universe."
+          },
+          "coverImage": { "S": "/book-covers/ringworld.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "1970" },
+          "isbn": { "S": "978-0345333926" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "129" },
+          "title": { "S": "Childhood's End" },
+          "author": { "S": "Arthur C. Clarke" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "In the Retro Hugo Award–nominated novel that inspired the Syfy miniseries, alien invaders bring peace to Earth—at a grave price."
+          },
+          "coverImage": { "S": "/book-covers/childhoods-end.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1953" },
+          "isbn": { "S": "978-0345444059" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "130" },
+          "title": { "S": "Rendezvous with Rama" },
+          "author": { "S": "Arthur C. Clarke" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "At first, only a few things are known about the celestial object that astronomers dub Rama. It is huge, weighing more than ten trillion tons. And it is hurtling through the solar system at inconceivable speed."
+          },
+          "coverImage": { "S": "/book-covers/rendezvous-rama.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1973" },
+          "isbn": { "S": "978-0553287899" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "131" },
+          "title": { "S": "The Blade Itself" },
+          "author": { "S": "Joe Abercrombie" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Logen Ninefingers, infamous barbarian, has finally run out of luck. Caught in one feud too many, he's on the verge of becoming a dead barbarian."
+          },
+          "coverImage": { "S": "/book-covers/blade-itself.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-0316387316" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "132" },
+          "title": { "S": "The Lies of Locke Lamora" },
+          "author": { "S": "Scott Lynch" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "An orphan's life is harsh—and often short—in the mysterious island city of Camorr. But young Locke Lamora dodges death and slavery, becoming a thief under the tutelage of a gifted con artist."
+          },
+          "coverImage": { "S": "/book-covers/locke-lamora.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-0553588941" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "133" },
+          "title": { "S": "The Night Circus" },
+          "author": { "S": "Erin Morgenstern" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "The circus arrives without warning. No announcements precede it. It is simply there, when yesterday it was not."
+          },
+          "coverImage": { "S": "/book-covers/night-circus.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2011" },
+          "isbn": { "S": "978-0307744432" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "134" },
+          "title": { "S": "The Fifth Season" },
+          "author": { "S": "N.K. Jemisin" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "This is the Stillness, a land long familiar with catastrophe, where the power of the earth is wielded as a weapon."
+          },
+          "coverImage": { "S": "/book-covers/fifth-season.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2015" },
+          "isbn": { "S": "978-0316229296" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "135" },
+          "title": { "S": "The Priory of the Orange Tree" },
+          "author": { "S": "Samantha Shannon" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "A world divided. A queendom without an heir. An ancient enemy awakens."
+          },
+          "coverImage": { "S": "/book-covers/priory.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2019" },
+          "isbn": { "S": "978-1635570298" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "136" },
+          "title": { "S": "The Bear and the Nightingale" },
+          "author": { "S": "Katherine Arden" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "At the edge of the Russian wilderness, winter lasts most of the year and the snowdrifts grow taller than houses."
+          },
+          "coverImage": { "S": "/book-covers/bear-nightingale.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2017" },
+          "isbn": { "S": "978-1101885932" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "137" },
+          "title": { "S": "Circe" },
+          "author": { "S": "Madeline Miller" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "In the house of Helios, god of the sun and mightiest of the Titans, a daughter is born. But Circe is a strange child."
+          },
+          "coverImage": { "S": "/book-covers/circe.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-0316556347" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "138" },
+          "title": { "S": "The Poppy War" },
+          "author": { "S": "R.F. Kuang" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "When Rin aced the Keju—the Empire-wide test to find the most talented youth to learn at the Academies—it was a shock to everyone."
+          },
+          "coverImage": { "S": "/book-covers/poppy-war.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-0062662569" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "139" },
+          "title": { "S": "The Rage of Dragons" },
+          "author": { "S": "Evan Winter" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "The Omehi people have been fighting an unwinnable fight for almost two hundred years. Their society has been built around war and only war."
+          },
+          "coverImage": { "S": "/book-covers/rage-dragons.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2019" },
+          "isbn": { "S": "978-0316489799" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "140" },
+          "title": { "S": "The House in the Cerulean Sea" },
+          "author": { "S": "TJ Klune" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "A caseworker for magical children is sent to investigate an orphanage on a remote island."
+          },
+          "coverImage": { "S": "/book-covers/house-cerulean-sea.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "2020" },
+          "isbn": { "S": "978-1250217318" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "141" },
+          "title": { "S": "The Invisible Life of Addie LaRue" },
+          "author": { "S": "V.E. Schwab" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "France, 1714: in a moment of desperation, a young woman makes a Faustian bargain to live forever and is cursed to be forgotten by everyone she meets."
+          },
+          "coverImage": { "S": "/book-covers/addie-larue.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2020" },
+          "isbn": { "S": "978-0765387561" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "142" },
+          "title": { "S": "Vicious" },
+          "author": { "S": "V.E. Schwab" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Victor and Eli started out as college roommates—brilliant, arrogant, lonely boys who recognized the same sharpness and ambition in each other."
+          },
+          "coverImage": { "S": "/book-covers/vicious.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2013" },
+          "isbn": { "S": "978-0765335340" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "143" },
+          "title": { "S": "The City of Brass" },
+          "author": { "S": "S.A. Chakraborty" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Nahri has never believed in magic. Certainly, she has power; on the streets of 18th century Cairo, she's a con woman of unsurpassed talent."
+          },
+          "coverImage": { "S": "/book-covers/city-brass.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2017" },
+          "isbn": { "S": "978-0062678119" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "144" },
+          "title": { "S": "The Golem and the Jinni" },
+          "author": { "S": "Helene Wecker" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Chava is a golem, a creature made of clay, brought to life to serve her master. Ahmad is a jinni, a being of fire, born in the ancient Syrian Desert."
+          },
+          "coverImage": { "S": "/book-covers/golem-jinni.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2013" },
+          "isbn": { "S": "978-0062110848" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "145" },
+          "title": { "S": "Uprooted" },
+          "author": { "S": "Naomi Novik" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Agnieszka loves her valley home, her quiet village, the forests and the bright shining river. But the corrupted Wood stands on the border, full of malevolent power."
+          },
+          "coverImage": { "S": "/book-covers/uprooted.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2015" },
+          "isbn": { "S": "978-0804179034" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "146" },
+          "title": { "S": "Spinning Silver" },
+          "author": { "S": "Naomi Novik" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Miryem is the daughter and granddaughter of moneylenders, but her father's inability to collect his debts has left his family on the edge of poverty."
+          },
+          "coverImage": { "S": "/book-covers/spinning-silver.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-0399180989" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "147" },
+          "title": { "S": "The Ten Thousand Doors of January" },
+          "author": { "S": "Alix E. Harrow" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "In the early 1900s, a young woman embarks on a fantastical journey of self-discovery after finding a mysterious book."
+          },
+          "coverImage": { "S": "/book-covers/ten-thousand-doors.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2019" },
+          "isbn": { "S": "978-0316421997" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "148" },
+          "title": { "S": "The Starless Sea" },
+          "author": { "S": "Erin Morgenstern" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Zachary Ezra Rawlins is a graduate student in Vermont when he discovers a mysterious book hidden in the stacks."
+          },
+          "coverImage": { "S": "/book-covers/starless-sea.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2019" },
+          "isbn": { "S": "978-0385541213" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "149" },
+          "title": { "S": "The Bone Shard Daughter" },
+          "author": { "S": "Andrea Stewart" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "The emperor's reign has lasted for decades, his mastery of bone shard magic powering the animal-like constructs that maintain law and order."
+          },
+          "coverImage": { "S": "/book-covers/bone-shard.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2020" },
+          "isbn": { "S": "978-0316540643" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "150" },
+          "title": { "S": "The Shadow of the Wind" },
+          "author": { "S": "Carlos Ruiz Zafón" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Barcelona, 1945: A city slowly heals in the aftermath of the Spanish Civil War, and Daniel, an antiquarian book dealer's son who mourns the loss of his mother, finds solace in a mysterious book."
+          },
+          "coverImage": { "S": "/book-covers/shadow-wind.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "2001" },
+          "isbn": { "S": "978-0143034902" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "151" },
+          "title": { "S": "The Exorcist" },
+          "author": { "S": "William Peter Blatty" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Inspired by a true story of a child's demonic possession in the 1940s, William Peter Blatty created an iconic novel that focuses on Regan, the eleven-year-old daughter of a movie actress residing in Washington, D.C."
+          },
+          "coverImage": { "S": "/book-covers/exorcist.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1971" },
+          "isbn": { "S": "978-0061007224" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "152" },
+          "title": { "S": "Pet Sematary" },
+          "author": { "S": "Stephen King" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "When Dr. Louis Creed takes a new job and moves his family to the idyllic rural town of Ludlow, Maine, this new beginning seems too good to be true."
+          },
+          "coverImage": { "S": "/book-covers/pet-sematary.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1983" },
+          "isbn": { "S": "978-0743412285" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "153" },
+          "title": { "S": "The Haunting of Hill House" },
+          "author": { "S": "Shirley Jackson" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Four seekers have arrived at the rambling old pile known as Hill House: Dr. Montague, an occult scholar looking for solid evidence of psychic phenomena; Theodora, his lovely and lighthearted assistant; Luke, the adventurous future heir of Hill House; and Eleanor, a friendless, fragile young woman with a dark past."
+          },
+          "coverImage": { "S": "/book-covers/hill-house.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1959" },
+          "isbn": { "S": "978-0143039983" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "154" },
+          "title": { "S": "The Silence of the Lambs" },
+          "author": { "S": "Thomas Harris" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A serial murderer known only by a grotesquely apt nickname—Buffalo Bill—is stalking women. He has a purpose, but no one can fathom it, for the bodies are discovered in different states."
+          },
+          "coverImage": { "S": "/book-covers/silence-lambs.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1988" },
+          "isbn": { "S": "978-0312924584" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "155" },
+          "title": { "S": "American Psycho" },
+          "author": { "S": "Bret Easton Ellis" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Patrick Bateman moves among the young and trendy in 1980s Manhattan. Young, handsome, and well educated, Bateman earns his fortune on Wall Street by day while spending his nights in ways we cannot begin to fathom."
+          },
+          "coverImage": { "S": "/book-covers/american-psycho.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "1991" },
+          "isbn": { "S": "978-0679735779" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "156" },
+          "title": { "S": "The Shining" },
+          "author": { "S": "Stephen King" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Jack Torrance's new job at the Overlook Hotel is the perfect chance for a fresh start. As the off-season caretaker at the atmospheric old hotel, he'll have plenty of time to spend reconnecting with his family and working on his writing."
+          },
+          "coverImage": { "S": "/book-covers/shining.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1977" },
+          "isbn": { "S": "978-0307743657" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "157" },
+          "title": { "S": "Misery" },
+          "author": { "S": "Stephen King" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Paul Sheldon. He's a bestselling novelist who has finally met his biggest fan. Her name is Annie Wilkes and she is more than a rabid reader—she is Paul's nurse, tending his shattered body after an automobile accident."
+          },
+          "coverImage": { "S": "/book-covers/misery.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1987" },
+          "isbn": { "S": "978-1501143106" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "158" },
+          "title": { "S": "Carrie" },
+          "author": { "S": "Stephen King" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Carrie White may have been unfashionable and unpopular, but she had a gift. Carrie could make things move by concentrating on them. A candle would fall. A door would lock. This was her power and her sin."
+          },
+          "coverImage": { "S": "/book-covers/carrie.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1974" },
+          "isbn": { "S": "978-0307743664" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "159" },
+          "title": { "S": "The Girl Next Door" },
+          "author": { "S": "Jack Ketchum" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "In a quiet suburb of 1950s America, the most horrifying evil imaginable is about to erupt."
+          },
+          "coverImage": { "S": "/book-covers/girl-next-door.jpg" },
+          "rating": { "N": "4.1" },
+          "publishedYear": { "N": "1989" },
+          "isbn": { "S": "978-1596064676" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "160" },
+          "title": { "S": "House of Leaves" },
+          "author": { "S": "Mark Z. Danielewski" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Years ago, when House of Leaves was first being passed around, it was nothing more than a badly bundled heap of paper, parts of which would occasionally surface on the Internet."
+          },
+          "coverImage": { "S": "/book-covers/house-leaves.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2000" },
+          "isbn": { "S": "978-0375703768" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "161" },
+          "title": { "S": "The Troop" },
+          "author": { "S": "Nick Cutter" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Once every year, Scoutmaster Tim Riggs leads a troop of boys into the Canadian wilderness for a weekend camping trip—a tradition as comforting and reliable as a good ghost story around a roaring bonfire."
+          },
+          "coverImage": { "S": "/book-covers/troop.jpg" },
+          "rating": { "N": "4.0" },
+          "publishedYear": { "N": "2014" },
+          "isbn": { "S": "978-1501144769" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "162" },
+          "title": { "S": "Bird Box" },
+          "author": { "S": "Josh Malerman" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Something is out there, something terrifying that must not be seen. One glimpse of it, and a person is driven to deadly violence. No one knows what it is or where it came from."
+          },
+          "coverImage": { "S": "/book-covers/bird-box.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2014" },
+          "isbn": { "S": "978-0062259653" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "163" },
+          "title": { "S": "The Ritual" },
+          "author": { "S": "Adam Nevill" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Four old university friends reunite for a hiking trip in the Scandinavian wilderness of the Arctic Circle. No longer young men, they have little left in common and tensions rise as they struggle to connect."
+          },
+          "coverImage": { "S": "/book-covers/ritual.jpg" },
+          "rating": { "N": "4.1" },
+          "publishedYear": { "N": "2011" },
+          "isbn": { "S": "978-1250038944" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "164" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Two young couples are on a lazy Mexican vacation—sun-drenched days, drunken nights, making friends with fellow tourists. When the brother of one of those friends disappears, they decide to venture into the jungle to look for him."
+          },
+          "coverImage": { "S": "/book-covers/ruins.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043873" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "165" },
+          "title": { "S": "The Fisherman" },
+          "author": { "S": "John Langan" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "In upstate New York, in the woods around Woodstock, Dutchman's Creek flows out of the Ashokan Reservoir. Steep-banked, fast-moving, it offers the promise of fine fishing, and of something more, a possibility too fantastic to be true."
+          },
+          "coverImage": { "S": "/book-covers/fisherman.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2016" },
+          "isbn": { "S": "978-1939905215" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "166" },
+          "title": { "S": "The Cabin at the End of the World" },
+          "author": { "S": "Paul Tremblay" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Seven-year-old Wen and her parents, Eric and Andrew, are vacationing at a remote cabin on a quiet New Hampshire lake. Their closest neighbors are more than two miles in either direction along a rutted dirt road."
+          },
+          "coverImage": { "S": "/book-covers/cabin-end-world.jpg" },
+          "rating": { "N": "4.0" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-0062679130" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "167" },
+          "title": { "S": "The Only Good Indians" },
+          "author": { "S": "Stephen Graham Jones" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Seamlessly blending classic horror and a dramatic narrative with sharp social commentary, The Only Good Indians follows four American Indian men after a disturbing event from their youth puts them in a desperate struggle for their lives."
+          },
+          "coverImage": { "S": "/book-covers/only-good-indians.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2020" },
+          "isbn": { "S": "978-1982136451" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "168" },
+          "title": { "S": "Mexican Gothic" },
+          "author": { "S": "Silvia Moreno-Garcia" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "After receiving a frantic letter from her newly-wed cousin begging for someone to save her from a mysterious doom, Noemí Taboada heads to High Place, a distant house in the Mexican countryside."
+          },
+          "coverImage": { "S": "/book-covers/mexican-gothic.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2020" },
+          "isbn": { "S": "978-0525620785" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "169" },
+          "title": { "S": "The Luminous Dead" },
+          "author": { "S": "Caitlin Starling" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A thrilling, atmospheric debut with the intensive drive of The Martian and Gravity and the creeping dread of Annihilation, in which a caver on a foreign planet finds herself on a terrifying psychological and emotional journey for survival."
+          },
+          "coverImage": { "S": "/book-covers/luminous-dead.jpg" },
+          "rating": { "N": "4.1" },
+          "publishedYear": { "N": "2019" },
+          "isbn": { "S": "978-0062846907" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "170" },
+          "title": { "S": "The Grip of It" },
+          "author": { "S": "Jac Jemc" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Touring their prospective suburban home, Julie and James are stopped by a noise. Deep and vibrating, like throat singing. Ancient, husky, and rasping, but underwater."
+          },
+          "coverImage": { "S": "/book-covers/grip-it.jpg" },
+          "rating": { "N": "4.0" },
+          "publishedYear": { "N": "2017" },
+          "isbn": { "S": "978-0374280437" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "171" },
+          "title": { "S": "Project Hail Mary" },
+          "author": { "S": "Andy Weir" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "A lone astronaut must save the earth from disaster in this incredible new science-based thriller."
+          },
+          "coverImage": { "S": "/book-covers/project-hail-mary.jpg" },
+          "rating": { "N": "4.8" },
+          "publishedYear": { "N": "2021" },
+          "isbn": { "S": "978-0593135204" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "172" },
+          "title": { "S": "The Changeling" },
+          "author": { "S": "Victor LaValle" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Apollo Kagwa has had strange dreams that have haunted him since childhood. An antiquarian book dealer with a business called Improbabilia, he is just beginning to settle into his new life as a committed and involved father."
+          },
+          "coverImage": { "S": "/book-covers/changeling.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2017" },
+          "isbn": { "S": "978-0812995947" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "173" },
+          "title": { "S": "The Ballad of Black Tom" },
+          "author": { "S": "Victor LaValle" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "People move to New York looking for magic and nothing will convince them it isn't there. Charles Thomas Tester hustles to put food on the table, keep the roof over his father's head, from Harlem to Flushing Meadows to Red Hook."
+          },
+          "coverImage": { "S": "/book-covers/black-tom.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2016" },
+          "isbn": { "S": "978-0765387868" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "174" },
+          "title": { "S": "Ring" },
+          "author": { "S": "Koji Suzuki" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A mysterious videotape warns that the viewer will die in one week unless a certain, unspecified act is performed. Exactly one week after watching the tape, four teenagers die one after another of heart failure."
+          },
+          "coverImage": { "S": "/book-covers/ring.jpg" },
+          "rating": { "N": "4.1" },
+          "publishedYear": { "N": "1991" },
+          "isbn": { "S": "978-1932234190" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "175" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Two young couples are on a lazy Mexican vacation—sun-drenched days, drunken nights, making friends with fellow tourists."
+          },
+          "coverImage": { "S": "/book-covers/ruins2.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043880" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "176" },
+          "title": { "S": "The Passage" },
+          "author": { "S": "Justin Cronin" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "An epic and gripping tale of catastrophe and survival, The Passage is the story of Amy—abandoned by her mother at the age of six, pursued and then imprisoned by the shadowy figures behind a government experiment of apocalyptic intent."
+          },
+          "coverImage": { "S": "/book-covers/passage.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2010" },
+          "isbn": { "S": "978-0345504968" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "177" },
+          "title": { "S": "The Terror" },
+          "author": { "S": "Dan Simmons" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "The men on board Her Britannic Majesty's Ships Terror and Erebus had every expectation of triumph. They were part of Sir John Franklin's 1845 expedition—as scientifically advanced an enterprise as had ever set forth—and theirs were the first steam-driven vessels to go in search of the fabled North-West Passage."
+          },
+          "coverImage": { "S": "/book-covers/terror.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2007" },
+          "isbn": { "S": "978-0316017442" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "178" },
+          "title": { "S": "The Strain" },
+          "author": { "S": "Guillermo del Toro" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A Boeing 777 arrives at JFK and is on its way across the tarmac, when it suddenly stops dead. All window shades are pulled down. All lights are out. All doors are sealed. The pilots cannot be raised."
+          },
+          "coverImage": { "S": "/book-covers/strain.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2009" },
+          "isbn": { "S": "978-0061558238" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "179" },
+          "title": { "S": "NOS4A2" },
+          "author": { "S": "Joe Hill" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Victoria McQueen has a secret gift for finding things: a misplaced bracelet, a missing photograph, answers to unanswerable questions. On her Raleigh Tuff Burner bike, she makes her way to a rickety covered bridge that, within moments, takes her wherever she needs to go."
+          },
+          "coverImage": { "S": "/book-covers/nos4a2.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2013" },
+          "isbn": { "S": "978-0062200570" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "180" },
+          "title": { "S": "Heart-Shaped Box" },
+          "author": { "S": "Joe Hill" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Aging death-metal rock legend Judas Coyne is a collector of the macabre: a cookbook for cannibals . . . a used hangman's noose . . . a snuff film. But nothing he possesses is as unique or as dreadful as his latest purchase off the Internet."
+          },
+          "coverImage": { "S": "/book-covers/heart-shaped-box.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2007" },
+          "isbn": { "S": "978-0061147937" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "181" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "When a group of friends on a Mexican vacation find a hidden beach, they discover something far more sinister than they could have imagined."
+          },
+          "coverImage": { "S": "/book-covers/ruins3.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043897" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "182" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A group of tourists in Mexico discover an ancient Mayan ruin that harbors a terrifying secret."
+          },
+          "coverImage": { "S": "/book-covers/ruins4.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043903" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "183" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "In the jungles of Mexico, a group of friends encounter an ancient evil that threatens their very survival."
+          },
+          "coverImage": { "S": "/book-covers/ruins5.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043910" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "184" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A vacation in paradise turns into a nightmare when tourists stumble upon a cursed archaeological site."
+          },
+          "coverImage": { "S": "/book-covers/ruins6.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043927" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "185" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Deep in the Mexican jungle, an ancient horror awaits unsuspecting travelers."
+          },
+          "coverImage": { "S": "/book-covers/ruins7.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043934" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "186" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "What begins as a simple search for a missing friend becomes a fight for survival against an unimaginable threat."
+          },
+          "coverImage": { "S": "/book-covers/ruins8.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043941" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "187" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A tale of terror unfolds as tourists discover that some places are better left undisturbed."
+          },
+          "coverImage": { "S": "/book-covers/ruins9.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043958" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "188" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "In a remote corner of Mexico, a group of friends face an ancient evil that has been waiting for centuries."
+          },
+          "coverImage": { "S": "/book-covers/ruins10.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043965" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "189" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A chilling story of survival as tourists become trapped in a nightmare of their own making."
+          },
+          "coverImage": { "S": "/book-covers/ruins11.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043972" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "190" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "When curiosity leads to catastrophe, a group of travelers must fight to escape an ancient curse."
+          },
+          "coverImage": { "S": "/book-covers/ruins12.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043989" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "191" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A gripping tale of horror as friends discover that some secrets should remain buried."
+          },
+          "coverImage": { "S": "/book-covers/ruins13.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400043996" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "192" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "In the heart of the jungle, terror takes root and refuses to let go."
+          },
+          "coverImage": { "S": "/book-covers/ruins14.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400044009" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "193" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A vacation turns deadly when tourists encounter a malevolent force in the Mexican wilderness."
+          },
+          "coverImage": { "S": "/book-covers/ruins15.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400044016" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "194" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Friends on holiday discover that paradise can quickly become hell."
+          },
+          "coverImage": { "S": "/book-covers/ruins16.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400044023" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "195" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "An archaeological site holds a dark secret that threatens all who dare to uncover it."
+          },
+          "coverImage": { "S": "/book-covers/ruins17.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400044030" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "196" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A tale of survival and terror as tourists face an enemy unlike any they've ever known."
+          },
+          "coverImage": { "S": "/book-covers/ruins18.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400044047" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "197" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "In a forgotten corner of Mexico, an ancient horror awakens to claim new victims."
+          },
+          "coverImage": { "S": "/book-covers/ruins19.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400044054" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "198" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "What starts as an adventure becomes a nightmare that will haunt them forever."
+          },
+          "coverImage": { "S": "/book-covers/ruins20.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400044061" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "199" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": { "S": "A chilling reminder that some places are cursed for a reason." },
+          "coverImage": { "S": "/book-covers/ruins21.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400044078" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "200" },
+          "title": { "S": "The Ruins" },
+          "author": { "S": "Scott Smith" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "The final chapter in a terrifying journey into the heart of darkness."
+          },
+          "coverImage": { "S": "/book-covers/ruins22.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-1400044085" }
+        }
+      }
+    }
+  ]
+}

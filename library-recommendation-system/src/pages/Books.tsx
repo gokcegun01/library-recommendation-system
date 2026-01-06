@@ -14,6 +14,7 @@ export function Books() {
   const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sortBy, setSortBy] = useState('title');
+  const [selectedGenre, setSelectedGenre] = useState('all');
 
   useEffect(() => {
     loadBooks();
@@ -32,26 +33,64 @@ export function Books() {
     }
   };
 
-  const handleSearch = (query: string) => {
-    if (!query.trim()) {
-      setFilteredBooks(books);
-      return;
+  // Get unique genres
+  const genres = ['all', ...Array.from(new Set(books.map((book) => book.genre)))];
+
+  const applyFilters = (searchQuery = '', genre = selectedGenre) => {
+    let filtered = books;
+
+    // Filter by genre
+    if (genre !== 'all') {
+      filtered = filtered.filter((book) => book.genre === genre);
     }
 
-    const lowercaseQuery = query.toLowerCase();
-    const filtered = books.filter(
-      (book) =>
-        book.title.toLowerCase().includes(lowercaseQuery) ||
-        book.author.toLowerCase().includes(lowercaseQuery) ||
-        book.genre.toLowerCase().includes(lowercaseQuery)
-    );
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const lowercaseQuery = searchQuery.toLowerCase();
+      filtered = filtered.filter(
+        (book) =>
+          book.title.toLowerCase().includes(lowercaseQuery) ||
+          book.author.toLowerCase().includes(lowercaseQuery) ||
+          book.genre.toLowerCase().includes(lowercaseQuery)
+      );
+    }
+
+    // Apply current sort
+    filtered = sortBooks(filtered, sortBy);
+
     setFilteredBooks(filtered);
   };
 
-  // TODO: Implement sort functionality
+  const sortBooks = (booksToSort: Book[], sortValue: string) => {
+    return [...booksToSort].sort((a, b) => {
+      switch (sortValue) {
+        case 'title':
+          return a.title.localeCompare(b.title);
+        case 'author':
+          return a.author.localeCompare(b.author);
+        case 'rating':
+          return b.rating - a.rating; // Highest first
+        case 'year':
+          return b.publishedYear - a.publishedYear; // Newest first
+        default:
+          return 0;
+      }
+    });
+  };
+
+  const handleSearch = (query: string) => {
+    applyFilters(query, selectedGenre);
+  };
+
+  const handleGenreChange = (genre: string) => {
+    setSelectedGenre(genre);
+    applyFilters('', genre);
+  };
+
   const handleSort = (value: string) => {
     setSortBy(value);
-    // Add sorting logic here
+    const sorted = sortBooks(filteredBooks, value);
+    setFilteredBooks(sorted);
   };
 
   if (isLoading) {
@@ -83,14 +122,32 @@ export function Books() {
 
         {/* Filters & Sort */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-          <div className="glass-effect px-4 py-2 rounded-xl border border-white/20">
-            <p className="text-slate-700 font-semibold">
-              Showing <span className="text-violet-600">{filteredBooks.length}</span>{' '}
-              {filteredBooks.length === 1 ? 'book' : 'books'}
-            </p>
+          <div className="flex items-center gap-4">
+            <div className="glass-effect px-4 py-2 rounded-xl border border-white/20">
+              <p className="text-slate-700 font-semibold">
+                Showing <span className="text-violet-600">{filteredBooks.length}</span>{' '}
+                {filteredBooks.length === 1 ? 'book' : 'books'}
+              </p>
+            </div>
+
+            {/* Genre Filter */}
+            <div className="flex items-center gap-3">
+              <label className="text-sm text-slate-700 font-semibold">Genre:</label>
+              <select
+                value={selectedGenre}
+                onChange={(e) => handleGenreChange(e.target.value)}
+                className="input-modern px-4 py-2.5 text-sm font-medium"
+              >
+                {genres.map((genre) => (
+                  <option key={genre} value={genre}>
+                    {genre === 'all' ? 'All Genres' : genre}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
 
-          {/* TODO: Implement sort logic */}
+          {/* Sort */}
           <div className="flex items-center gap-3">
             <label className="text-sm text-slate-700 font-semibold">Sort by:</label>
             <select

@@ -1,10 +1,21 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/common/Button';
+import { useState, useEffect } from 'react';
+import { getBooks } from '@/services/api';
 
 /**
  * Modern Home page with stunning gradients and animations
  */
 export function Home() {
+  const [bookCount, setBookCount] = useState(200); // Default fallback
+
+  useEffect(() => {
+    // Fetch actual book count
+    getBooks()
+      .then((books) => setBookCount(books.length))
+      .catch(() => setBookCount(200)); // Fallback on error
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -29,7 +40,7 @@ export function Home() {
           <h1 className="text-6xl md:text-8xl font-extrabold mb-6 text-white leading-tight tracking-tight">
             Discover Your Next
             <br />
-            <span className="bg-gradient-to-r from-violet-300 via-pink-300 to-indigo-300 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-violet-300 via-pink-300 to-indigo-300 bg-clip-text text-transparent">
               Favorite Book
             </span>
           </h1>
@@ -55,16 +66,18 @@ export function Home() {
           {/* Stats */}
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="glass-dark rounded-2xl p-6">
-              <div className="text-4xl font-bold text-white mb-2">10,000+</div>
+              <div className="text-4xl font-bold text-white mb-2">
+                {bookCount.toLocaleString()}+
+              </div>
               <div className="text-slate-300">Books Available</div>
             </div>
             <div className="glass-dark rounded-2xl p-6">
-              <div className="text-4xl font-bold text-white mb-2">50,000+</div>
-              <div className="text-slate-300">Happy Readers</div>
+              <div className="text-4xl font-bold text-white mb-2">AI-Powered</div>
+              <div className="text-slate-300">Smart Recommendations</div>
             </div>
             <div className="glass-dark rounded-2xl p-6">
-              <div className="text-4xl font-bold text-white mb-2">98%</div>
-              <div className="text-slate-300">Satisfaction Rate</div>
+              <div className="text-4xl font-bold text-white mb-2">6 Genres</div>
+              <div className="text-slate-300">Diverse Collection</div>
             </div>
           </div>
         </div>
@@ -85,7 +98,7 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <div className="card-modern hover-glow group">
-              <div className="w-16 h-16 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-violet-500/30 group-hover:shadow-xl group-hover:shadow-violet-500/50 transition-all duration-300 group-hover:scale-110">
+              <div className="w-16 h-16 bg-linear-to-br from-violet-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-violet-500/30 group-hover:shadow-xl group-hover:shadow-violet-500/50 transition-all duration-300 group-hover:scale-110">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -111,7 +124,7 @@ export function Home() {
 
             {/* Feature 2 */}
             <div className="card-modern hover-glow group">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-600 to-rose-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-pink-500/30 group-hover:shadow-xl group-hover:shadow-pink-500/50 transition-all duration-300 group-hover:scale-110">
+              <div className="w-16 h-16 bg-linear-to-br from-pink-600 to-rose-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-pink-500/30 group-hover:shadow-xl group-hover:shadow-pink-500/50 transition-all duration-300 group-hover:scale-110">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -137,7 +150,7 @@ export function Home() {
 
             {/* Feature 3 */}
             <div className="card-modern hover-glow group">
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/30 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300 group-hover:scale-110">
+              <div className="w-16 h-16 bg-linear-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/30 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300 group-hover:scale-110">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -178,7 +191,7 @@ export function Home() {
           <h2 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-white">
             Ready to Start Your
             <br />
-            <span className="bg-gradient-to-r from-violet-300 via-pink-300 to-indigo-300 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-violet-300 via-pink-300 to-indigo-300 bg-clip-text text-transparent">
               Reading Journey?
             </span>
           </h2>

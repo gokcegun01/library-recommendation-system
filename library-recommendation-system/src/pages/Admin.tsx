@@ -48,7 +48,6 @@ export function Admin() {
     }
 
     try {
-      // TODO: Replace with Lambda API call
       const created = await createBook(newBook);
       setBooks([...books, created]);
       setIsModalOpen(false);
@@ -65,8 +64,7 @@ export function Admin() {
     }
 
     try {
-      // TODO: Replace with Lambda API call
-      await deleteBook();
+      await deleteBook(id);
       setBooks(books.filter((book) => book.id !== id));
       showSuccess('Book deleted successfully!');
     } catch (error) {

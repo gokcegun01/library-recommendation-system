@@ -1,9 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/common/Button';
 import { LoadingSpinner } from '@/components/common/LoadingSpinner';
-import { BookGrid } from '@/components/books/BookGrid';
-import { getRecommendations, getBook } from '@/services/api';
-import { Book, Recommendation } from '@/types';
+import { getRecommendations, getBooks } from '@/services/api';
+import { Recommendation } from '@/types';
 import { handleApiError } from '@/utils/errorHandling';
 
 /**
@@ -12,8 +12,24 @@ import { handleApiError } from '@/utils/errorHandling';
 export function Recommendations() {
   const [query, setQuery] = useState('');
   const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
-  const [recommendedBooks, setRecommendedBooks] = useState<Book[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleBookClick = async (title: string) => {
+    try {
+      // Find book by title in database
+      const books = await getBooks();
+      const book = books.find((b) => b.title.toLowerCase() === title.toLowerCase());
+
+      if (book) {
+        navigate(`/books/${book.id}`);
+      } else {
+        alert('This book is not in our catalog yet.');
+      }
+    } catch (error) {
+      handleApiError(error);
+    }
+  };
 
   const exampleQueries = [
     'I love mystery novels with strong female protagonists',
@@ -28,18 +44,23 @@ export function Recommendations() {
       return;
     }
 
+    // Clear previous results
+    setRecommendations([]);
+
     setIsLoading(true);
     try {
-      // TODO: Replace with actual Bedrock API call
-      // This will call Lambda function that uses Amazon Bedrock
-      // to generate personalized recommendations based on the query
-      const recs = await getRecommendations();
+      console.log('Sending query to API:', query);
+
+      // Real Bedrock API call with user query
+      const recs = await getRecommendations(query);
+      console.log('Received recommendations:', recs);
+
       setRecommendations(recs);
 
-      // Fetch full book details for each recommendation
-      const books = await Promise.all(recs.map((rec) => getBook(rec.bookId)));
-      setRecommendedBooks(books.filter((book): book is Book => book !== null));
+      // AI recommendations don't need book details - they include title/author
+      // No need to fetch from database
     } catch (error) {
+      console.error('Recommendation error:', error);
       handleApiError(error);
     } finally {
       setIsLoading(false);
@@ -51,7 +72,7 @@ export function Recommendations() {
       <div className="container mx-auto max-w-4xl">
         <div className="mb-12 text-center">
           <div className="inline-block mb-4">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/30 mx-auto">
+            <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/30 mx-auto">
               <svg
                 className="w-8 h-8 text-white"
                 fill="none"
@@ -93,7 +114,7 @@ export function Recommendations() {
                 <button
                   key={index}
                   onClick={() => setQuery(example)}
-                  className="text-sm bg-gradient-to-r from-violet-50 to-indigo-50 hover:from-violet-100 hover:to-indigo-100 text-slate-800 px-4 py-2 rounded-xl transition-all border border-violet-200 hover:border-violet-300 font-medium hover:shadow-md"
+                  className="text-sm bg-linear-to-r from-violet-50 to-indigo-50 hover:from-violet-100 hover:to-indigo-100 text-slate-800 px-4 py-2 rounded-xl transition-all border border-violet-200 hover:border-violet-300 font-medium hover:shadow-md"
                 >
                   {example}
                 </button>
@@ -139,46 +160,53 @@ export function Recommendations() {
               <span className="gradient-text">Recommended for You</span>
             </h2>
 
-            {/* Display recommendations with reasons */}
-            <div className="space-y-6 mb-12">
-              {recommendations.map((rec, index) => {
-                const book = recommendedBooks[index];
-                if (!book) return null;
-
-                return (
-                  <div
-                    key={rec.id}
-                    className="glass-effect rounded-2xl shadow-xl border border-white/20 p-6 hover-glow transition-all duration-300"
-                  >
-                    <div className="flex items-start gap-6">
-                      <img
-                        src={book.coverImage}
-                        alt={book.title}
-                        className="w-28 h-40 object-cover rounded-xl shadow-lg"
-                        onError={(e) => {
-                          e.currentTarget.src = 'https://via.placeholder.com/112x160?text=No+Cover';
-                        }}
-                      />
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-slate-900 mb-2">{book.title}</h3>
-                        <p className="text-slate-600 mb-3 font-medium">by {book.author}</p>
-                        <p className="text-slate-700 mb-4 leading-relaxed">{rec.reason}</p>
-                        <div className="flex flex-wrap items-center gap-3">
-                          <div className="bg-gradient-to-r from-violet-100 to-indigo-100 px-3 py-1.5 rounded-xl border border-violet-200">
-                            <span className="text-sm text-violet-700 font-semibold">
-                              Confidence: {Math.round(rec.confidence * 100)}%
-                            </span>
-                          </div>
-                          <span className="badge-gradient px-3 py-1.5 text-sm">{book.genre}</span>
+            {/* Display AI recommendations directly */}
+            <div className="space-y-6">
+              {recommendations.map((rec) => (
+                <div
+                  key={rec.id}
+                  onClick={() => handleBookClick(rec.title)}
+                  className="glass-effect rounded-2xl shadow-xl border border-white/20 p-6 hover-glow transition-all duration-300 cursor-pointer group"
+                >
+                  <div className="flex items-start gap-6">
+                    <div className="w-28 h-40 bg-linear-to-br from-violet-100 to-indigo-100 rounded-xl shadow-lg flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <svg
+                        className="w-12 h-12 text-violet-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                        />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-violet-600 transition-colors">
+                        {rec.title}
+                      </h3>
+                      <p className="text-slate-600 mb-3 font-medium">by {rec.author}</p>
+                      <p className="text-slate-700 mb-4 leading-relaxed">{rec.reason}</p>
+                      <div className="flex flex-wrap items-center gap-3">
+                        <div className="bg-linear-to-r from-violet-100 to-indigo-100 px-3 py-1.5 rounded-xl border border-violet-200">
+                          <span className="text-sm text-violet-700 font-semibold">
+                            AI Confidence: {Math.round(rec.confidence * 100)}%
+                          </span>
+                        </div>
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                          <span className="text-sm text-violet-600 font-semibold">
+                            Click to view details →
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
-
-            <BookGrid books={recommendedBooks} />
           </div>
         )}
 

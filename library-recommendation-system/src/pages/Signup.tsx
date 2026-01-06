@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Input } from '@/components/common/Input';
 import { Button } from '@/components/common/Button';
@@ -11,7 +11,7 @@ import { handleApiError } from '@/utils/errorHandling';
  */
 export function Signup() {
   const navigate = useNavigate();
-  const { signup } = useAuth();
+  const { signup, isAuthenticated, isLoading: authLoading } = useAuth();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -23,6 +23,13 @@ export function Signup() {
     confirmPassword?: string;
   }>({});
   const [isLoading, setIsLoading] = useState(false);
+
+  // Redirect if already authenticated
+  useEffect(() => {
+    if (!authLoading && isAuthenticated) {
+      navigate('/');
+    }
+  }, [isAuthenticated, authLoading, navigate]);
 
   const validate = (): boolean => {
     const newErrors: typeof errors = {};
@@ -62,7 +69,7 @@ export function Signup() {
     setIsLoading(true);
     try {
       await signup(email, password, name);
-      navigate('/');
+      // Don't navigate here - let AuthContext handle navigation to /verify
     } catch (error) {
       handleApiError(error);
     } finally {
@@ -75,7 +82,7 @@ export function Signup() {
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
           <div className="inline-block mb-4">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/30 mx-auto">
+            <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/30 mx-auto">
               <svg
                 className="w-8 h-8 text-white"
                 fill="none"

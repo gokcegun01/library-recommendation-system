@@ -2,10 +2,13 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/common/Button';
 import { LoadingSpinner } from '@/components/common/LoadingSpinner';
-import { getBook } from '@/services/api';
-import { Book } from '@/types';
+import { Modal } from '@/components/common/Modal';
+import { getBook, getReadingLists, updateReadingList } from '@/services/api';
+import { Book, ReadingList } from '@/types';
 import { formatRating } from '@/utils/formatters';
 import { handleApiError } from '@/utils/errorHandling';
+import { useAuth } from '@/hooks/useAuth';
+import { useToast } from '@/contexts/ToastContext';
 
 /**
  * BookDetail page component
@@ -13,8 +16,13 @@ import { handleApiError } from '@/utils/errorHandling';
 export function BookDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+  const { showToast } = useToast();
   const [book, setBook] = useState<Book | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [readingLists, setReadingLists] = useState<ReadingList[]>([]);
+  const [isLoadingLists, setIsLoadingLists] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -39,9 +47,56 @@ export function BookDetail() {
     }
   };
 
-  // TODO: Implement add to reading list functionality
-  const handleAddToList = () => {
-    alert('Add to reading list functionality coming soon!');
+  // Add to reading list functionality
+  const handleAddToList = async () => {
+    if (!isAuthenticated) {
+      navigate('/login');
+      return;
+    }
+
+    setIsModalOpen(true);
+    await loadReadingLists();
+  };
+
+  const loadReadingLists = async () => {
+    setIsLoadingLists(true);
+    try {
+      const lists = await getReadingLists();
+      setReadingLists(lists);
+    } catch (error) {
+      handleApiError(error);
+    } finally {
+      setIsLoadingLists(false);
+    }
+  };
+
+  const handleAddBookToList = async (listId: string) => {
+    if (!book) return;
+
+    try {
+      const targetList = readingLists.find((list) => list.id === listId);
+      if (!targetList) return;
+
+      // Check if book is already in the list
+      if (targetList.bookIds.includes(book.id)) {
+        showToast('Book is already in this reading list!', 'warning');
+        return;
+      }
+
+      // Add book to the list
+      const updatedBookIds = [...targetList.bookIds, book.id];
+
+      // Include userId in the update request
+      await updateReadingList(listId, {
+        bookIds: updatedBookIds,
+        userId: targetList.userId, // userId'yi ekle
+      });
+
+      setIsModalOpen(false);
+      showToast(`Added "${book.title}" to "${targetList.name}"!`, 'success');
+    } catch (error) {
+      handleApiError(error);
+    }
   };
 
   if (isLoading) {
@@ -213,6 +268,70 @@ export function BookDetail() {
           </div>
         </div>
       </div>
+
+      {/* Add to Reading List Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title="Add to Reading List">
+        <div className="space-y-4">
+          {isLoadingLists ? (
+            <div className="flex justify-center py-8">
+              <LoadingSpinner />
+            </div>
+          ) : readingLists.length === 0 ? (
+            <div className="text-center py-8">
+              <p className="text-slate-600 mb-4">You don't have any reading lists yet.</p>
+              <Button
+                variant="primary"
+                onClick={() => {
+                  setIsModalOpen(false);
+                  navigate('/reading-lists');
+                }}
+              >
+                Create Your First Reading List
+              </Button>
+            </div>
+          ) : (
+            <>
+              <p className="text-slate-600 mb-4">Choose a reading list to add "{book?.title}":</p>
+              <div className="space-y-2 max-h-60 overflow-y-auto">
+                {readingLists.map((list) => (
+                  <button
+                    key={list.id}
+                    onClick={() => handleAddBookToList(list.id)}
+                    className="w-full text-left p-4 rounded-lg border border-slate-200 hover:border-violet-300 hover:bg-violet-50 transition-colors group"
+                  >
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h3 className="font-semibold text-slate-900 group-hover:text-violet-700">
+                          {list.name}
+                        </h3>
+                        {list.description && (
+                          <p className="text-sm text-slate-600 mt-1">{list.description}</p>
+                        )}
+                        <p className="text-xs text-slate-500 mt-2">
+                          {list.bookIds.length} book{list.bookIds.length !== 1 ? 's' : ''}
+                        </p>
+                      </div>
+                      <svg
+                        className="w-5 h-5 text-slate-400 group-hover:text-violet-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </Modal>
     </div>
   );
 }

@@ -1,0 +1,304 @@
+{
+  "Books": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "201" },
+          "title": { "S": "To Kill a Mockingbird" },
+          "author": { "S": "Harper Lee" },
+          "genre": { "S": "Fiction" },
+          "description": { "S": "A gripping tale of racial injustice and childhood innocence in the American South during the 1930s." },
+          "coverImage": { "S": "/book-covers/to-kill-a-mockingbird.jpg" },
+          "rating": { "N": "4.8" },
+          "publishedYear": { "N": "1960" },
+          "isbn": { "S": "978-0061120084" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "202" },
+          "title": { "S": "1984" },
+          "author": { "S": "George Orwell" },
+          "genre": { "S": "Science Fiction" },
+          "description": { "S": "A dystopian social science fiction novel and cautionary tale about the dangers of totalitarianism." },
+          "coverImage": { "S": "/book-covers/1984.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "1949" },
+          "isbn": { "S": "978-0451524935" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "203" },
+          "title": { "S": "Pride and Prejudice" },
+          "author": { "S": "Jane Austen" },
+          "genre": { "S": "Romance" },
+          "description": { "S": "A romantic novel of manners that follows the character development of Elizabeth Bennet." },
+          "coverImage": { "S": "/book-covers/pride-and-prejudice.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1813" },
+          "isbn": { "S": "978-0141439518" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "204" },
+          "title": { "S": "The Great Gatsby" },
+          "author": { "S": "F. Scott Fitzgerald" },
+          "genre": { "S": "Fiction" },
+          "description": { "S": "A story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan in 1920s America." },
+          "coverImage": { "S": "/book-covers/great-gatsby.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1925" },
+          "isbn": { "S": "978-0743273565" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "205" },
+          "title": { "S": "Harry Potter and the Sorcerer's Stone" },
+          "author": { "S": "J.K. Rowling" },
+          "genre": { "S": "Fantasy" },
+          "description": { "S": "A young wizard begins his magical education at Hogwarts School of Witchcraft and Wizardry." },
+          "coverImage": { "S": "/book-covers/harry-potter-1.jpg" },
+          "rating": { "N": "4.9" },
+          "publishedYear": { "N": "1997" },
+          "isbn": { "S": "978-0439708180" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "206" },
+          "title": { "S": "The Catcher in the Rye" },
+          "author": { "S": "J.D. Salinger" },
+          "genre": { "S": "Fiction" },
+          "description": { "S": "The story of teenage rebellion and alienation told through the eyes of Holden Caulfield." },
+          "coverImage": { "S": "/book-covers/catcher-in-the-rye.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "1951" },
+          "isbn": { "S": "978-0316769174" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "207" },
+          "title": { "S": "The Hobbit" },
+          "author": { "S": "J.R.R. Tolkien" },
+          "genre": { "S": "Fantasy" },
+          "description": { "S": "Bilbo Baggins embarks on an unexpected journey to help a group of dwarves reclaim their mountain home." },
+          "coverImage": { "S": "/book-covers/the-hobbit.jpg" },
+          "rating": { "N": "4.8" },
+          "publishedYear": { "N": "1937" },
+          "isbn": { "S": "978-0547928227" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "208" },
+          "title": { "S": "The Lord of the Rings" },
+          "author": { "S": "J.R.R. Tolkien" },
+          "genre": { "S": "Fantasy" },
+          "description": { "S": "An epic high-fantasy novel about the quest to destroy the One Ring and defeat the Dark Lord Sauron." },
+          "coverImage": { "S": "/book-covers/lord-of-the-rings.jpg" },
+          "rating": { "N": "4.9" },
+          "publishedYear": { "N": "1954" },
+          "isbn": { "S": "978-0544003415" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "209" },
+          "title": { "S": "Animal Farm" },
+          "author": { "S": "George Orwell" },
+          "genre": { "S": "Fiction" },
+          "description": { "S": "A satirical allegory of Soviet totalitarianism told through the story of farm animals who rebel against their human farmer." },
+          "coverImage": { "S": "/book-covers/animal-farm.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1945" },
+          "isbn": { "S": "978-0451526342" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "210" },
+          "title": { "S": "Brave New World" },
+          "author": { "S": "Aldous Huxley" },
+          "genre": { "S": "Science Fiction" },
+          "description": { "S": "A dystopian novel set in a futuristic World State of genetically modified citizens and an intelligence-based social hierarchy." },
+          "coverImage": { "S": "/book-covers/brave-new-world.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1932" },
+          "isbn": { "S": "978-0060850524" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "211" },
+          "title": { "S": "The Chronicles of Narnia" },
+          "author": { "S": "C.S. Lewis" },
+          "genre": { "S": "Fantasy" },
+          "description": { "S": "A series of seven fantasy novels about the adventures of children in the magical land of Narnia." },
+          "coverImage": { "S": "/book-covers/chronicles-of-narnia.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "1950" },
+          "isbn": { "S": "978-0066238500" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "212" },
+          "title": { "S": "Jane Eyre" },
+          "author": { "S": "Charlotte Brontë" },
+          "genre": { "S": "Romance" },
+          "description": { "S": "The story of an orphaned girl who becomes a governess and falls in love with her employer, Mr. Rochester." },
+          "coverImage": { "S": "/book-covers/jane-eyre.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1847" },
+          "isbn": { "S": "978-0141441146" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "213" },
+          "title": { "S": "Wuthering Heights" },
+          "author": { "S": "Emily Brontë" },
+          "genre": { "S": "Romance" },
+          "description": { "S": "A tale of passion and revenge set on the Yorkshire moors, centered on the intense relationship between Heathcliff and Catherine." },
+          "coverImage": { "S": "/book-covers/wuthering-heights.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1847" },
+          "isbn": { "S": "978-0141439556" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "214" },
+          "title": { "S": "Moby-Dick" },
+          "author": { "S": "Herman Melville" },
+          "genre": { "S": "Fiction" },
+          "description": { "S": "The narrative of Captain Ahab's obsessive quest to kill the white whale that destroyed his ship and severed his leg." },
+          "coverImage": { "S": "/book-covers/moby-dick.jpg" },
+          "rating": { "N": "4.1" },
+          "publishedYear": { "N": "1851" },
+          "isbn": { "S": "978-0142437247" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "215" },
+          "title": { "S": "Crime and Punishment" },
+          "author": { "S": "Fyodor Dostoevsky" },
+          "genre": { "S": "Fiction" },
+          "description": { "S": "A psychological drama about a poor student who commits murder and the moral consequences that follow." },
+          "coverImage": { "S": "/book-covers/crime-and-punishment.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1866" },
+          "isbn": { "S": "978-0143058144" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "216" },
+          "title": { "S": "The Brothers Karamazov" },
+          "author": { "S": "Fyodor Dostoevsky" },
+          "genre": { "S": "Fiction" },
+          "description": { "S": "A philosophical novel that explores faith, doubt, free will, and morality through the story of three brothers." },
+          "coverImage": { "S": "/book-covers/brothers-karamazov.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "1880" },
+          "isbn": { "S": "978-0374528379" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "217" },
+          "title": { "S": "War and Peace" },
+          "author": { "S": "Leo Tolstoy" },
+          "genre": { "S": "Fiction" },
+          "description": { "S": "An epic novel that chronicles the French invasion of Russia and its impact on Tsarist society." },
+          "coverImage": { "S": "/book-covers/war-and-peace.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1869" },
+          "isbn": { "S": "978-0307266934" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "218" },
+          "title": { "S": "Anna Karenina" },
+          "author": { "S": "Leo Tolstoy" },
+          "genre": { "S": "Romance" },
+          "description": { "S": "A tragic love story about a married aristocrat who has an affair with the affluent Count Vronsky." },
+          "coverImage": { "S": "/book-covers/anna-karenina.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1877" },
+          "isbn": { "S": "978-0143035008" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "219" },
+          "title": { "S": "The Odyssey" },
+          "author": { "S": "Homer" },
+          "genre": { "S": "Fantasy" },
+          "description": { "S": "An ancient Greek epic poem about Odysseus's ten-year journey home after the Trojan War." },
+          "coverImage": { "S": "/book-covers/the-odyssey.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "-800" },
+          "isbn": { "S": "978-0140268867" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "220" },
+          "title": { "S": "The Iliad" },
+          "author": { "S": "Homer" },
+          "genre": { "S": "Fantasy" },
+          "description": { "S": "An ancient Greek epic poem set during the Trojan War, focusing on the hero Achilles." },
+          "coverImage": { "S": "/book-covers/the-iliad.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "-750" },
+          "isbn": { "S": "978-0140275360" }
+        }
+      }
+    }
+  ]
+}

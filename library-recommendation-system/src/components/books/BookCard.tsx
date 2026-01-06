@@ -23,6 +23,22 @@ export function BookCard({ book }: BookCardProps) {
     navigate(`/books/${book.id}`);
   };
 
+  // Generate placeholder based on genre
+  const getPlaceholderColor = (genre: string) => {
+    const colors: Record<string, string> = {
+      Fiction: 'from-blue-400 to-blue-600',
+      Mystery: 'from-purple-400 to-purple-600',
+      Romance: 'from-pink-400 to-pink-600',
+      'Science Fiction': 'from-cyan-400 to-cyan-600',
+      Fantasy: 'from-violet-400 to-violet-600',
+      Horror: 'from-red-400 to-red-600',
+      'Non-Fiction': 'from-green-400 to-green-600',
+    };
+    return colors[genre] || 'from-gray-400 to-gray-600';
+  };
+
+  const placeholderUrl = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23${getPlaceholderColor(book.genre).includes('blue') ? '60a5fa' : getPlaceholderColor(book.genre).includes('purple') ? 'a78bfa' : getPlaceholderColor(book.genre).includes('pink') ? 'f472b6' : getPlaceholderColor(book.genre).includes('cyan') ? '22d3ee' : getPlaceholderColor(book.genre).includes('violet') ? '8b5cf6' : getPlaceholderColor(book.genre).includes('red') ? 'f87171' : '4ade80'};stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23${getPlaceholderColor(book.genre).includes('blue') ? '2563eb' : getPlaceholderColor(book.genre).includes('purple') ? '7c3aed' : getPlaceholderColor(book.genre).includes('pink') ? 'ec4899' : getPlaceholderColor(book.genre).includes('cyan') ? '0891b2' : getPlaceholderColor(book.genre).includes('violet') ? '6d28d9' : getPlaceholderColor(book.genre).includes('red') ? 'dc2626' : '16a34a'};stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='400' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='45%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' font-weight='bold'%3E${encodeURIComponent(book.genre)}%3C/text%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='16' fill='white' text-anchor='middle' opacity='0.8'%3ENo Cover%3C/text%3E%3C/svg%3E`;
+
   return (
     <div
       className="glass-effect rounded-2xl overflow-hidden card-hover cursor-pointer group border border-white/20 hover-glow"
@@ -34,7 +50,7 @@ export function BookCard({ book }: BookCardProps) {
           alt={book.title}
           className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
           onError={(e) => {
-            e.currentTarget.src = 'https://via.placeholder.com/300x400?text=No+Cover';
+            e.currentTarget.src = placeholderUrl;
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

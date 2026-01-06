@@ -1,0 +1,1700 @@
+{
+  "Books": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "1" },
+          "title": { "S": "The Midnight Library" },
+          "author": { "S": "Matt Haig" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived."
+          },
+          "coverImage": { "S": "/book-covers/midnight-library.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2020" },
+          "isbn": { "S": "978-0525559474" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "2" },
+          "title": { "S": "Project Hail Mary" },
+          "author": { "S": "Andy Weir" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "A lone astronaut must save the earth from disaster in this incredible new science-based thriller from the author of The Martian."
+          },
+          "coverImage": { "S": "/book-covers/project-hail-mary.jpg" },
+          "rating": { "N": "4.8" },
+          "publishedYear": { "N": "2021" },
+          "isbn": { "S": "978-0593135204" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "3" },
+          "title": { "S": "The Silent Patient" },
+          "author": { "S": "Alex Michaelides" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Alicia Berenson's life is seemingly perfect. A famous painter married to an in-demand fashion photographer, she lives in a grand house. One evening her husband returns home late, and Alicia shoots him five times in the face, and then never speaks another word."
+          },
+          "coverImage": { "S": "/book-covers/silent-patient.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2019" },
+          "isbn": { "S": "978-1250301697" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "4" },
+          "title": { "S": "People We Meet on Vacation" },
+          "author": { "S": "Emily Henry" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Two best friends. Ten summer trips. One last chance to fall in love."
+          },
+          "coverImage": { "S": "/book-covers/people-we-meet.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2021" },
+          "isbn": { "S": "978-1984806758" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "5" },
+          "title": { "S": "Atomic Habits" },
+          "author": { "S": "James Clear" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "An Easy & Proven Way to Build Good Habits & Break Bad Ones. Tiny changes, remarkable results."
+          },
+          "coverImage": { "S": "/book-covers/atomic-habits.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-0735211292" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "6" },
+          "title": { "S": "The Night Circus" },
+          "author": { "S": "Erin Morgenstern" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "A mesmerizing tale of two young magicians who are bound in a competition set within a mysterious circus that arrives without warning and is only open at night."
+          },
+          "coverImage": { "S": "/book-covers/night-circus.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2011" },
+          "isbn": { "S": "978-0307744432" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "7" },
+          "title": { "S": "Dune" },
+          "author": { "S": "Frank Herbert" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world."
+          },
+          "coverImage": { "S": "/book-covers/dune.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1965" },
+          "isbn": { "S": "978-0441172719" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "8" },
+          "title": { "S": "The Thursday Murder Club" },
+          "author": { "S": "Richard Osman" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Four unlikely friends meet weekly to investigate unsolved killings. But when a local developer is found dead, these unorthodox detectives find themselves in the middle of their first live case."
+          },
+          "coverImage": { "S": "/book-covers/thursday-murder-club.jpg" },
+          "rating": { "N": "4.1" },
+          "publishedYear": { "N": "2020" },
+          "isbn": { "S": "978-1984880987" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "9" },
+          "title": { "S": "Educated" },
+          "author": { "S": "Tara Westover" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "A memoir about a young girl who, kept out of school, leaves her survivalist family and goes on to earn a PhD from Cambridge University."
+          },
+          "coverImage": { "S": "/book-covers/educated.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-0399590504" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "10" },
+          "title": { "S": "The Song of Achilles" },
+          "author": { "S": "Madeline Miller" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "A tale of gods, kings, immortal fame and the human heart, The Song of Achilles is a dazzling literary feat that brilliantly reimagines Homer's enduring masterwork, The Iliad."
+          },
+          "coverImage": { "S": "/book-covers/song-of-achilles.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "2011" },
+          "isbn": { "S": "978-0062060624" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "11" },
+          "title": { "S": "1984" },
+          "author": { "S": "George Orwell" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "A dystopian social science fiction novel and cautionary tale about the dangers of totalitarianism."
+          },
+          "coverImage": { "S": "/book-covers/1984.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "1949" },
+          "isbn": { "S": "978-0451524935" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "12" },
+          "title": { "S": "To Kill a Mockingbird" },
+          "author": { "S": "Harper Lee" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice."
+          },
+          "coverImage": { "S": "/book-covers/mockingbird.jpg" },
+          "rating": { "N": "4.8" },
+          "publishedYear": { "N": "1960" },
+          "isbn": { "S": "978-0061120084" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "13" },
+          "title": { "S": "The Great Gatsby" },
+          "author": { "S": "F. Scott Fitzgerald" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "The story of the mysteriously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan."
+          },
+          "coverImage": { "S": "/book-covers/gatsby.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1925" },
+          "isbn": { "S": "978-0743273565" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "14" },
+          "title": { "S": "Pride and Prejudice" },
+          "author": { "S": "Jane Austen" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "A romantic novel of manners that follows the character development of Elizabeth Bennet."
+          },
+          "coverImage": { "S": "/book-covers/pride-prejudice.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1813" },
+          "isbn": { "S": "978-0141439518" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "15" },
+          "title": { "S": "The Catcher in the Rye" },
+          "author": { "S": "J.D. Salinger" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "The story of teenage rebellion and alienation told through the eyes of Holden Caulfield."
+          },
+          "coverImage": { "S": "/book-covers/catcher-rye.jpg" },
+          "rating": { "N": "4.0" },
+          "publishedYear": { "N": "1951" },
+          "isbn": { "S": "978-0316769174" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "16" },
+          "title": { "S": "Harry Potter and the Sorcerer's Stone" },
+          "author": { "S": "J.K. Rowling" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Harry Potter has never been the star of a Quidditch team, scoring points while riding a broom far above the ground. He knows no spells, has never helped to hatch a dragon, and has never worn a cloak of invisibility."
+          },
+          "coverImage": { "S": "/book-covers/harry-potter-1.jpg" },
+          "rating": { "N": "4.8" },
+          "publishedYear": { "N": "1997" },
+          "isbn": { "S": "978-0439708180" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "17" },
+          "title": { "S": "The Hobbit" },
+          "author": { "S": "J.R.R. Tolkien" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar."
+          },
+          "coverImage": { "S": "/book-covers/hobbit.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "1937" },
+          "isbn": { "S": "978-0547928227" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "18" },
+          "title": { "S": "The Lord of the Rings" },
+          "author": { "S": "J.R.R. Tolkien" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them."
+          },
+          "coverImage": { "S": "/book-covers/lotr.jpg" },
+          "rating": { "N": "4.9" },
+          "publishedYear": { "N": "1954" },
+          "isbn": { "S": "978-0544003415" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "19" },
+          "title": { "S": "The Hunger Games" },
+          "author": { "S": "Suzanne Collins" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts."
+          },
+          "coverImage": { "S": "/book-covers/hunger-games.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2008" },
+          "isbn": { "S": "978-0439023481" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "20" },
+          "title": { "S": "The Da Vinci Code" },
+          "author": { "S": "Dan Brown" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "An ingenious code hidden in the works of Leonardo da Vinci. A desperate race through the cathedrals and castles of Europe."
+          },
+          "coverImage": { "S": "/book-covers/da-vinci-code.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2003" },
+          "isbn": { "S": "978-0307474278" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "21" },
+          "title": { "S": "The Alchemist" },
+          "author": { "S": "Paulo Coelho" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "A magical fable about following your dreams and listening to your heart."
+          },
+          "coverImage": { "S": "/book-covers/alchemist.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1988" },
+          "isbn": { "S": "978-0062315007" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "22" },
+          "title": { "S": "The Book Thief" },
+          "author": { "S": "Markus Zusak" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "It is 1939. Nazi Germany. The country is holding its breath. Death has never been busier, and will be busier still."
+          },
+          "coverImage": { "S": "/book-covers/book-thief.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "2005" },
+          "isbn": { "S": "978-0375842207" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "23" },
+          "title": { "S": "Gone Girl" },
+          "author": { "S": "Gillian Flynn" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "On a warm summer morning in North Carthage, Missouri, it is Nick and Amy Dunne's fifth wedding anniversary. Presents are being wrapped and reservations are being made when Nick's clever and beautiful wife disappears."
+          },
+          "coverImage": { "S": "/book-covers/gone-girl.jpg" },
+          "rating": { "N": "4.1" },
+          "publishedYear": { "N": "2012" },
+          "isbn": { "S": "978-0307588371" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "24" },
+          "title": { "S": "The Girl on the Train" },
+          "author": { "S": "Paula Hawkins" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Rachel takes the same commuter train every morning and night. Every day she rattles down the track, flashes past a stretch of cozy suburban homes, and stops at the signal that allows her to daily watch the same couple breakfasting on their deck."
+          },
+          "coverImage": { "S": "/book-covers/girl-train.jpg" },
+          "rating": { "N": "4.0" },
+          "publishedYear": { "N": "2015" },
+          "isbn": { "S": "978-1594633669" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "25" },
+          "title": { "S": "The Fault in Our Stars" },
+          "author": { "S": "John Green" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis."
+          },
+          "coverImage": { "S": "/book-covers/fault-stars.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2012" },
+          "isbn": { "S": "978-0142424179" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "26" },
+          "title": { "S": "Sapiens" },
+          "author": { "S": "Yuval Noah Harari" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "A brief history of humankind from the Stone Age to the modern age."
+          },
+          "coverImage": { "S": "/book-covers/sapiens.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "2011" },
+          "isbn": { "S": "978-0062316097" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "27" },
+          "title": { "S": "Becoming" },
+          "author": { "S": "Michelle Obama" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "An intimate, powerful, and inspiring memoir by the former First Lady of the United States."
+          },
+          "coverImage": { "S": "/book-covers/becoming.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-1524763138" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "28" },
+          "title": { "S": "The Subtle Art of Not Giving a F*ck" },
+          "author": { "S": "Mark Manson" },
+          "genre": { "S": "Non-Fiction" },
+          "description": { "S": "A counterintuitive approach to living a good life." },
+          "coverImage": { "S": "/book-covers/subtle-art.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2016" },
+          "isbn": { "S": "978-0062457714" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "29" },
+          "title": { "S": "Where the Crawdads Sing" },
+          "author": { "S": "Delia Owens" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "For years, rumors of the 'Marsh Girl' have haunted Barkley Cove, a quiet town on the North Carolina coast."
+          },
+          "coverImage": { "S": "/book-covers/crawdads.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-0735219090" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "30" },
+          "title": { "S": "The Handmaid's Tale" },
+          "author": { "S": "Margaret Atwood" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "In the world of the near future, who will control women's bodies?"
+          },
+          "coverImage": { "S": "/book-covers/handmaids-tale.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1985" },
+          "isbn": { "S": "978-0385490818" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "31" },
+          "title": { "S": "The Martian" },
+          "author": { "S": "Andy Weir" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "Six days ago, astronaut Mark Watney became one of the first people to walk on Mars. Now, he's sure he'll be the first person to die there."
+          },
+          "coverImage": { "S": "/book-covers/martian.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "2011" },
+          "isbn": { "S": "978-0553418026" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "32" },
+          "title": { "S": "Ready Player One" },
+          "author": { "S": "Ernest Cline" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "In the year 2045, reality is an ugly place. The only time teenage Wade Watts really feels alive is when he's jacked into the virtual utopia known as the OASIS."
+          },
+          "coverImage": { "S": "/book-covers/ready-player-one.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2011" },
+          "isbn": { "S": "978-0307887443" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "33" },
+          "title": { "S": "The Kite Runner" },
+          "author": { "S": "Khaled Hosseini" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "The unforgettable, heartbreaking story of the unlikely friendship between a wealthy boy and the son of his father's servant."
+          },
+          "coverImage": { "S": "/book-covers/kite-runner.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "2003" },
+          "isbn": { "S": "978-1594631931" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "34" },
+          "title": { "S": "Life of Pi" },
+          "author": { "S": "Yann Martel" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "After the tragic sinking of a cargo ship, one solitary lifeboat remains bobbing on the wild, blue Pacific."
+          },
+          "coverImage": { "S": "/book-covers/life-pi.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2001" },
+          "isbn": { "S": "978-0156027328" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "35" },
+          "title": { "S": "The Road" },
+          "author": { "S": "Cormac McCarthy" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "A father and his son walk alone through burned America. Nothing moves in the ravaged landscape save the ash on the wind."
+          },
+          "coverImage": { "S": "/book-covers/the-road.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-0307387899" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "36" },
+          "title": { "S": "Brave New World" },
+          "author": { "S": "Aldous Huxley" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "A dystopian novel set in a futuristic World State of genetically modified citizens and an intelligence-based social hierarchy."
+          },
+          "coverImage": { "S": "/book-covers/brave-new-world.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1932" },
+          "isbn": { "S": "978-0060850524" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "37" },
+          "title": { "S": "Animal Farm" },
+          "author": { "S": "George Orwell" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "A farm is taken over by its overworked, mistreated animals. With flaming idealism and stirring slogans, they set out to create a paradise of progress, justice, and equality."
+          },
+          "coverImage": { "S": "/book-covers/animal-farm.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1945" },
+          "isbn": { "S": "978-0451526342" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "38" },
+          "title": { "S": "The Chronicles of Narnia" },
+          "author": { "S": "C.S. Lewis" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Journeys to the end of the world, fantastic creatures, and epic battles between good and evil."
+          },
+          "coverImage": { "S": "/book-covers/narnia.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "1950" },
+          "isbn": { "S": "978-0066238500" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "39" },
+          "title": { "S": "A Game of Thrones" },
+          "author": { "S": "George R.R. Martin" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Long ago, in a time forgotten, a preternatural event threw the seasons out of balance. In a land where summers can last decades and winters a lifetime, trouble is brewing."
+          },
+          "coverImage": { "S": "/book-covers/game-thrones.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1996" },
+          "isbn": { "S": "978-0553103540" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "40" },
+          "title": { "S": "The Name of the Wind" },
+          "author": { "S": "Patrick Rothfuss" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Told in Kvothe's own voice, this is the tale of the magically gifted young man who grows to be the most notorious wizard his world has ever seen."
+          },
+          "coverImage": { "S": "/book-covers/name-wind.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "2007" },
+          "isbn": { "S": "978-0756404741" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "41" },
+          "title": { "S": "The Way of Kings" },
+          "author": { "S": "Brandon Sanderson" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "Roshar is a world of stone and storms. Uncanny tempests of incredible power sweep across the rocky terrain."
+          },
+          "coverImage": { "S": "/book-covers/way-kings.jpg" },
+          "rating": { "N": "4.8" },
+          "publishedYear": { "N": "2010" },
+          "isbn": { "S": "978-0765326355" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "42" },
+          "title": { "S": "Mistborn: The Final Empire" },
+          "author": { "S": "Brandon Sanderson" },
+          "genre": { "S": "Fantasy" },
+          "description": {
+            "S": "For a thousand years the ash fell and no flowers bloomed. For a thousand years the Skaa slaved in misery and lived in fear."
+          },
+          "coverImage": { "S": "/book-covers/mistborn.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "2006" },
+          "isbn": { "S": "978-0765350381" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "43" },
+          "title": { "S": "The Shining" },
+          "author": { "S": "Stephen King" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Jack Torrance's new job at the Overlook Hotel is the perfect chance for a fresh start. As the off-season caretaker at the atmospheric old hotel, he'll have plenty of time to spend reconnecting with his family and working on his writing."
+          },
+          "coverImage": { "S": "/book-covers/shining.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1977" },
+          "isbn": { "S": "978-0307743657" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "44" },
+          "title": { "S": "It" },
+          "author": { "S": "Stephen King" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Welcome to Derry, Maine. It's a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real."
+          },
+          "coverImage": { "S": "/book-covers/it.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1986" },
+          "isbn": { "S": "978-1501142970" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "45" },
+          "title": { "S": "The Stand" },
+          "author": { "S": "Stephen King" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A patient escapes from a biological testing facility, unknowingly carrying a deadly weapon: a mutated strain of super-flu that will wipe out 99 percent of the world's population."
+          },
+          "coverImage": { "S": "/book-covers/the-stand.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1978" },
+          "isbn": { "S": "978-0307743688" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "46" },
+          "title": { "S": "Sherlock Holmes: The Complete Novels and Stories" },
+          "author": { "S": "Arthur Conan Doyle" },
+          "genre": { "S": "Mystery" },
+          "description": { "S": "The complete adventures of the world's greatest detective." },
+          "coverImage": { "S": "/book-covers/sherlock.jpg" },
+          "rating": { "N": "4.8" },
+          "publishedYear": { "N": "1887" },
+          "isbn": { "S": "978-0553328257" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "47" },
+          "title": { "S": "And Then There Were None" },
+          "author": { "S": "Agatha Christie" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Ten strangers are lured to an isolated island mansion off the Devon coast by a mysterious host."
+          },
+          "coverImage": { "S": "/book-covers/then-none.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1939" },
+          "isbn": { "S": "978-0062073488" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "48" },
+          "title": { "S": "Murder on the Orient Express" },
+          "author": { "S": "Agatha Christie" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Just after midnight, the famous Orient Express is stopped in its tracks by a snowdrift. By morning, the millionaire Samuel Edward Ratchett lies dead in his compartment."
+          },
+          "coverImage": { "S": "/book-covers/orient-express.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1934" },
+          "isbn": { "S": "978-0062693662" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "49" },
+          "title": { "S": "Big Little Lies" },
+          "author": { "S": "Liane Moriarty" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Sometimes it's the little lies that turn out to be the most lethal."
+          },
+          "coverImage": { "S": "/book-covers/big-little-lies.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2014" },
+          "isbn": { "S": "978-0399167065" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "50" },
+          "title": { "S": "The Woman in the Window" },
+          "author": { "S": "A.J. Finn" },
+          "genre": { "S": "Mystery" },
+          "description": {
+            "S": "Anna Fox lives alone—a recluse in her New York City home, unable to venture outside. She spends her day drinking wine, watching old movies, and spying on her neighbors."
+          },
+          "coverImage": { "S": "/book-covers/woman-window.jpg" },
+          "rating": { "N": "4.0" },
+          "publishedYear": { "N": "2018" },
+          "isbn": { "S": "978-0062678416" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "51" },
+          "title": { "S": "Me Before You" },
+          "author": { "S": "Jojo Moyes" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Lou Clark knows lots of things. She knows how many footsteps there are between the bus stop and home. She knows she likes working in The Buttered Bun tea shop."
+          },
+          "coverImage": { "S": "/book-covers/me-before-you.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2012" },
+          "isbn": { "S": "978-0143124542" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "52" },
+          "title": { "S": "The Notebook" },
+          "author": { "S": "Nicholas Sparks" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Every so often a love story so captures our hearts that it becomes more than a story—it becomes an experience to remember forever."
+          },
+          "coverImage": { "S": "/book-covers/notebook.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1996" },
+          "isbn": { "S": "978-1455582877" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "53" },
+          "title": { "S": "Outlander" },
+          "author": { "S": "Diana Gabaldon" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "Scottish Highlands, 1945. Claire Randall, a former British combat nurse, is just back from the war and reunited with her husband on a second honeymoon when she walks through a standing stone in one of the ancient circles that dot the British Isles."
+          },
+          "coverImage": { "S": "/book-covers/outlander.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1991" },
+          "isbn": { "S": "978-0385319959" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "54" },
+          "title": { "S": "Red, White & Royal Blue" },
+          "author": { "S": "Casey McQuiston" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "What happens when America's First Son falls in love with the Prince of Wales?"
+          },
+          "coverImage": { "S": "/book-covers/red-white-royal.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2019" },
+          "isbn": { "S": "978-1250316776" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "55" },
+          "title": { "S": "Beach Read" },
+          "author": { "S": "Emily Henry" },
+          "genre": { "S": "Romance" },
+          "description": {
+            "S": "A romance writer who no longer believes in love and a literary writer stuck in a rut engage in a summer-long challenge that may just upend everything they believe about happily ever afters."
+          },
+          "coverImage": { "S": "/book-covers/beach-read.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2020" },
+          "isbn": { "S": "978-1984806734" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "56" },
+          "title": { "S": "Thinking, Fast and Slow" },
+          "author": { "S": "Daniel Kahneman" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "A groundbreaking tour of the mind and explains the two systems that drive the way we think."
+          },
+          "coverImage": { "S": "/book-covers/thinking-fast-slow.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "2011" },
+          "isbn": { "S": "978-0374533557" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "57" },
+          "title": { "S": "The Power of Habit" },
+          "author": { "S": "Charles Duhigg" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "In The Power of Habit, award-winning business reporter Charles Duhigg takes us to the thrilling edge of scientific discoveries that explain why habits exist and how they can be changed."
+          },
+          "coverImage": { "S": "/book-covers/power-habit.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2012" },
+          "isbn": { "S": "978-0812981605" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "58" },
+          "title": { "S": "The 7 Habits of Highly Effective People" },
+          "author": { "S": "Stephen R. Covey" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "One of the most inspiring and impactful books ever written, The 7 Habits of Highly Effective People has captivated readers for 25 years."
+          },
+          "coverImage": { "S": "/book-covers/7-habits.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1989" },
+          "isbn": { "S": "978-1982137274" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "59" },
+          "title": { "S": "How to Win Friends and Influence People" },
+          "author": { "S": "Dale Carnegie" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "You can go after the job you want—and get it! You can take the job you have—and improve it!"
+          },
+          "coverImage": { "S": "/book-covers/win-friends.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1936" },
+          "isbn": { "S": "978-0671027032" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "60" },
+          "title": { "S": "Man's Search for Meaning" },
+          "author": { "S": "Viktor E. Frankl" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "Psychiatrist Viktor Frankl's memoir has riveted generations of readers with its descriptions of life in Nazi death camps and its lessons for spiritual survival."
+          },
+          "coverImage": { "S": "/book-covers/mans-search.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "1946" },
+          "isbn": { "S": "978-0807014295" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "61" },
+          "title": { "S": "The Lean Startup" },
+          "author": { "S": "Eric Ries" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "Most startups fail. But many of those failures are preventable. The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched."
+          },
+          "coverImage": { "S": "/book-covers/lean-startup.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "2011" },
+          "isbn": { "S": "978-0307887894" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "62" },
+          "title": { "S": "Zero to One" },
+          "author": { "S": "Peter Thiel" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "The great secret of our time is that there are still uncharted frontiers to explore and new inventions to create."
+          },
+          "coverImage": { "S": "/book-covers/zero-one.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "2014" },
+          "isbn": { "S": "978-0804139298" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "63" },
+          "title": { "S": "The Immortal Life of Henrietta Lacks" },
+          "author": { "S": "Rebecca Skloot" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "Her name was Henrietta Lacks, but scientists know her as HeLa. She was a poor black tobacco farmer whose cells—taken without her knowledge in 1951—became one of the most important tools in medicine."
+          },
+          "coverImage": { "S": "/book-covers/henrietta-lacks.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "2010" },
+          "isbn": { "S": "978-1400052189" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "64" },
+          "title": { "S": "Into the Wild" },
+          "author": { "S": "Jon Krakauer" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "In April 1992 a young man from a well-to-do family hitchhiked to Alaska and walked alone into the wilderness north of Mt. McKinley."
+          },
+          "coverImage": { "S": "/book-covers/into-wild.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1996" },
+          "isbn": { "S": "978-0385486804" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "65" },
+          "title": { "S": "Born a Crime" },
+          "author": { "S": "Trevor Noah" },
+          "genre": { "S": "Non-Fiction" },
+          "description": {
+            "S": "Trevor Noah's unlikely path from apartheid South Africa to the desk of The Daily Show began with a criminal act: his birth."
+          },
+          "coverImage": { "S": "/book-covers/born-crime.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "2016" },
+          "isbn": { "S": "978-0399588174" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "66" },
+          "title": { "S": "The Giver" },
+          "author": { "S": "Lois Lowry" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "The Giver, the 1994 Newbery Medal winner, has become one of the most influential novels of our time."
+          },
+          "coverImage": { "S": "/book-covers/giver.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1993" },
+          "isbn": { "S": "978-0544336261" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "67" },
+          "title": { "S": "Ender's Game" },
+          "author": { "S": "Orson Scott Card" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "In order to develop a secure defense against a hostile alien race's next attack, government agencies breed child geniuses and train them as soldiers."
+          },
+          "coverImage": { "S": "/book-covers/enders-game.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1985" },
+          "isbn": { "S": "978-0812550702" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "68" },
+          "title": { "S": "Foundation" },
+          "author": { "S": "Isaac Asimov" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "For twelve thousand years the Galactic Empire has ruled supreme. Now it is dying."
+          },
+          "coverImage": { "S": "/book-covers/foundation.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1951" },
+          "isbn": { "S": "978-0553293357" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "69" },
+          "title": { "S": "Neuromancer" },
+          "author": { "S": "William Gibson" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "The Matrix is a world within the world, a global consensus-hallucination, the representation of every byte of data in cyberspace."
+          },
+          "coverImage": { "S": "/book-covers/neuromancer.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "1984" },
+          "isbn": { "S": "978-0441569595" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "70" },
+          "title": { "S": "Snow Crash" },
+          "author": { "S": "Neal Stephenson" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "In reality, Hiro Protagonist delivers pizza for Uncle Enzo's CosoNostra Pizza Inc., but in the Metaverse he's a warrior prince."
+          },
+          "coverImage": { "S": "/book-covers/snow-crash.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1992" },
+          "isbn": { "S": "978-0553380958" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "71" },
+          "title": { "S": "The Hitchhiker's Guide to the Galaxy" },
+          "author": { "S": "Douglas Adams" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "Seconds before Earth is demolished to make way for a galactic freeway, Arthur Dent is plucked off the planet by his friend Ford Prefect."
+          },
+          "coverImage": { "S": "/book-covers/hitchhikers.jpg" },
+          "rating": { "N": "4.7" },
+          "publishedYear": { "N": "1979" },
+          "isbn": { "S": "978-0345391803" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "72" },
+          "title": { "S": "The Left Hand of Darkness" },
+          "author": { "S": "Ursula K. Le Guin" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "A groundbreaking work of science fiction, The Left Hand of Darkness tells the story of a lone human emissary to Winter, an alien world whose inhabitants can choose—and change—their gender."
+          },
+          "coverImage": { "S": "/book-covers/left-hand.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1969" },
+          "isbn": { "S": "978-0441478125" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "73" },
+          "title": { "S": "Fahrenheit 451" },
+          "author": { "S": "Ray Bradbury" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "Guy Montag is a fireman. His job is to destroy the most illegal of commodities, the printed book, along with the houses in which they are hidden."
+          },
+          "coverImage": { "S": "/book-covers/fahrenheit-451.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1953" },
+          "isbn": { "S": "978-1451673319" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "74" },
+          "title": { "S": "Slaughterhouse-Five" },
+          "author": { "S": "Kurt Vonnegut" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "A novel about a man who becomes unstuck in time and experiences the events of his life in a random order."
+          },
+          "coverImage": { "S": "/book-covers/slaughterhouse.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1969" },
+          "isbn": { "S": "978-0385333849" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "75" },
+          "title": { "S": "Catch-22" },
+          "author": { "S": "Joseph Heller" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Set in Italy during World War II, this is the story of the incomparable, malingering bombardier, Yossarian, a hero who is furious because thousands of people he has never met are trying to kill him."
+          },
+          "coverImage": { "S": "/book-covers/catch-22.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "1961" },
+          "isbn": { "S": "978-1451626650" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "76" },
+          "title": { "S": "One Hundred Years of Solitude" },
+          "author": { "S": "Gabriel García Márquez" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "The brilliant, bestselling, landmark novel that tells the story of the Buendia family, and chronicles the irreconcilable conflict between the desire for solitude and the need for love."
+          },
+          "coverImage": { "S": "/book-covers/hundred-years.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1967" },
+          "isbn": { "S": "978-0060883287" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "77" },
+          "title": { "S": "The Count of Monte Cristo" },
+          "author": { "S": "Alexandre Dumas" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Thrown in prison for a crime he has not committed, Edmond Dantes is confined to the grim fortress of If. There he learns of a great hoard of treasure hidden on the Isle of Monte Cristo."
+          },
+          "coverImage": { "S": "/book-covers/monte-cristo.jpg" },
+          "rating": { "N": "4.8" },
+          "publishedYear": { "N": "1844" },
+          "isbn": { "S": "978-0140449266" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "78" },
+          "title": { "S": "Jane Eyre" },
+          "author": { "S": "Charlotte Brontë" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Orphaned as a child, Jane has felt an outcast her whole young life. Her courage is tested once again when she arrives at Thornfield Hall."
+          },
+          "coverImage": { "S": "/book-covers/jane-eyre.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1847" },
+          "isbn": { "S": "978-0141441146" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "79" },
+          "title": { "S": "Wuthering Heights" },
+          "author": { "S": "Emily Brontë" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "At the centre of this novel is the passionate love between Catherine Earnshaw and Heathcliff - recounted with such emotional intensity that it has become one of the most enduring love stories in English literature."
+          },
+          "coverImage": { "S": "/book-covers/wuthering-heights.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1847" },
+          "isbn": { "S": "978-0141439556" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "80" },
+          "title": { "S": "Moby-Dick" },
+          "author": { "S": "Herman Melville" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "The saga of Captain Ahab and his monomaniacal pursuit of the white whale remains a peerless adventure story."
+          },
+          "coverImage": { "S": "/book-covers/moby-dick.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "1851" },
+          "isbn": { "S": "978-0142437247" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "81" },
+          "title": { "S": "The Picture of Dorian Gray" },
+          "author": { "S": "Oscar Wilde" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Written in his distinctively dazzling manner, Oscar Wilde's story of a fashionable young man who sells his soul for eternal youth and beauty is the author's most popular work."
+          },
+          "coverImage": { "S": "/book-covers/dorian-gray.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1890" },
+          "isbn": { "S": "978-0141439570" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "82" },
+          "title": { "S": "Frankenstein" },
+          "author": { "S": "Mary Shelley" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Mary Shelley's timeless gothic novel presents the epic battle between man and monster at its greatest literary pitch."
+          },
+          "coverImage": { "S": "/book-covers/frankenstein.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1818" },
+          "isbn": { "S": "978-0141439471" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "83" },
+          "title": { "S": "Dracula" },
+          "author": { "S": "Bram Stoker" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "A rich selection of background and source materials is provided in three areas: Contexts includes probable inspirations for Dracula in the earlier works of James Malcolm Rymer and Emily Gerard."
+          },
+          "coverImage": { "S": "/book-covers/dracula.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1897" },
+          "isbn": { "S": "978-0141439846" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "84" },
+          "title": { "S": "The Strange Case of Dr. Jekyll and Mr. Hyde" },
+          "author": { "S": "Robert Louis Stevenson" },
+          "genre": { "S": "Horror" },
+          "description": {
+            "S": "Published as a shilling shocker, Robert Louis Stevenson's dark psychological fantasy gave birth to the idea of the split personality."
+          },
+          "coverImage": { "S": "/book-covers/jekyll-hyde.jpg" },
+          "rating": { "N": "4.2" },
+          "publishedYear": { "N": "1886" },
+          "isbn": { "S": "978-0141439730" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "85" },
+          "title": { "S": "The Adventures of Huckleberry Finn" },
+          "author": { "S": "Mark Twain" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "A nineteenth-century boy from a Mississippi River town recounts his adventures as he travels down the river with a runaway slave, encountering a family involved in a feud, two scoundrels pretending to be royalty, and Tom Sawyer's aunt who mistakes him for Tom."
+          },
+          "coverImage": { "S": "/book-covers/huck-finn.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1884" },
+          "isbn": { "S": "978-0486280615" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "86" },
+          "title": { "S": "Little Women" },
+          "author": { "S": "Louisa May Alcott" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Grown-up Meg, tomboyish Jo, timid Beth, and precocious Amy. The four March sisters couldn't be more different. But with their father away at war, and their mother working to support the family, they have to rely on one another."
+          },
+          "coverImage": { "S": "/book-covers/little-women.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1868" },
+          "isbn": { "S": "978-0147514011" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "87" },
+          "title": { "S": "Anne of Green Gables" },
+          "author": { "S": "L.M. Montgomery" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Anne Shirley, a young orphan from the fictional community of Bolingbroke, Nova Scotia, is sent to live with Marilla and Matthew Cuthbert, siblings in their fifties and sixties, after a childhood spent in strangers' homes and orphanages."
+          },
+          "coverImage": { "S": "/book-covers/anne-green-gables.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1908" },
+          "isbn": { "S": "978-0147514004" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "88" },
+          "title": { "S": "A Wrinkle in Time" },
+          "author": { "S": "Madeleine L'Engle" },
+          "genre": { "S": "Science Fiction" },
+          "description": {
+            "S": "Meg Murry, her little brother Charles Wallace, and their mother are having a midnight snack on a dark and stormy night when an unearthly stranger appears at their door."
+          },
+          "coverImage": { "S": "/book-covers/wrinkle-time.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1962" },
+          "isbn": { "S": "978-0312367541" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "89" },
+          "title": { "S": "The Secret Garden" },
+          "author": { "S": "Frances Hodgson Burnett" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Mary Lennox was horrid. Selfish and spoilt, she was sent to stay with her hunchback uncle in Yorkshire. She hated it. But when she finds the way into a secret garden and begins to tend it, a change comes over her and her life."
+          },
+          "coverImage": { "S": "/book-covers/secret-garden.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1911" },
+          "isbn": { "S": "978-0141321066" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "90" },
+          "title": { "S": "The Outsiders" },
+          "author": { "S": "S.E. Hinton" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "The Outsiders is about two weeks in the life of a 14-year-old boy. The novel tells the story of Ponyboy Curtis and his struggles with right and wrong in a society in which he believes that he is an outsider."
+          },
+          "coverImage": { "S": "/book-covers/outsiders.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1967" },
+          "isbn": { "S": "978-0142407332" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "91" },
+          "title": { "S": "The Perks of Being a Wallflower" },
+          "author": { "S": "Stephen Chbosky" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Charlie is a freshman. And while he's not the biggest geek in the school, he is by no means popular. Shy, introspective, intelligent beyond his years yet socially awkward, he is a wallflower, caught between trying to live his life and trying to run from it."
+          },
+          "coverImage": { "S": "/book-covers/wallflower.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1999" },
+          "isbn": { "S": "978-1451696196" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "92" },
+          "title": { "S": "The Bell Jar" },
+          "author": { "S": "Sylvia Plath" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "The Bell Jar chronicles the crack-up of Esther Greenwood: brilliant, beautiful, enormously talented, and successful, but slowly going under—maybe for the last time."
+          },
+          "coverImage": { "S": "/book-covers/bell-jar.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1963" },
+          "isbn": { "S": "978-0061148514" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "93" },
+          "title": { "S": "The Color Purple" },
+          "author": { "S": "Alice Walker" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Celie is a poor black woman whose letters tell the story of 20 years of her life, beginning at age 14 when she is being abused and raped by her father and attempting to protect her sister from the same fate."
+          },
+          "coverImage": { "S": "/book-covers/color-purple.jpg" },
+          "rating": { "N": "4.6" },
+          "publishedYear": { "N": "1982" },
+          "isbn": { "S": "978-0156028356" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "94" },
+          "title": { "S": "Beloved" },
+          "author": { "S": "Toni Morrison" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "Staring unflinchingly into the abyss of slavery, this spellbinding novel transforms history into a story as powerful as Exodus and as intimate as a lullaby."
+          },
+          "coverImage": { "S": "/book-covers/beloved.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1987" },
+          "isbn": { "S": "978-1400033416" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "95" },
+          "title": { "S": "The Grapes of Wrath" },
+          "author": { "S": "John Steinbeck" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "The Pulitzer Prize-winning epic of the Great Depression, a book that galvanized—and sometimes outraged—millions of readers."
+          },
+          "coverImage": { "S": "/book-covers/grapes-wrath.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1939" },
+          "isbn": { "S": "978-0143039433" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "96" },
+          "title": { "S": "Of Mice and Men" },
+          "author": { "S": "John Steinbeck" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "They are an unlikely pair: George is small and quick and dark of face; Lennie, a man of tremendous size, has the mind of a young child. Yet they have formed a family, clinging together in the face of loneliness and alienation."
+          },
+          "coverImage": { "S": "/book-covers/mice-men.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1937" },
+          "isbn": { "S": "978-0140177398" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "97" },
+          "title": { "S": "Lord of the Flies" },
+          "author": { "S": "William Golding" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "At the dawn of the next world war, a plane crashes on an uncharted island, stranding a group of schoolboys. At first, with no adult supervision, their freedom is something to celebrate."
+          },
+          "coverImage": { "S": "/book-covers/lord-flies.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1954" },
+          "isbn": { "S": "978-0399501487" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "98" },
+          "title": { "S": "A Tale of Two Cities" },
+          "author": { "S": "Charles Dickens" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "It was the best of times, it was the worst of times. Set against the backdrop of the French Revolution, A Tale of Two Cities is one of Charles Dickens's most popular and dramatic stories."
+          },
+          "coverImage": { "S": "/book-covers/two-cities.jpg" },
+          "rating": { "N": "4.5" },
+          "publishedYear": { "N": "1859" },
+          "isbn": { "S": "978-0141439600" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "99" },
+          "title": { "S": "Great Expectations" },
+          "author": { "S": "Charles Dickens" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "In what may be Dickens's best novel, humble, orphaned Pip is apprenticed to the dirty work of the forge but dares to dream of becoming a gentleman."
+          },
+          "coverImage": { "S": "/book-covers/great-expectations.jpg" },
+          "rating": { "N": "4.4" },
+          "publishedYear": { "N": "1861" },
+          "isbn": { "S": "978-0141439563" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "100" },
+          "title": { "S": "Oliver Twist" },
+          "author": { "S": "Charles Dickens" },
+          "genre": { "S": "Fiction" },
+          "description": {
+            "S": "The story of the orphan Oliver, who runs away from the workhouse only to be taken in by a den of thieves, shocked readers when it was first published."
+          },
+          "coverImage": { "S": "/book-covers/oliver-twist.jpg" },
+          "rating": { "N": "4.3" },
+          "publishedYear": { "N": "1838" },
+          "isbn": { "S": "978-0141439747" }
+        }
+      }
+    }
+  ]
+}
