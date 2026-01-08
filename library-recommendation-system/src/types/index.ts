@@ -48,6 +48,12 @@ export interface Recommendation {
   confidence: number;
   title: string;
   author: string;
+  coverImage?: string;
+}
+
+export interface RecommendationResponse {
+  recommendations: Recommendation[];
+  source?: 'catalog' | 'general';
 }
 
 export interface AuthState {

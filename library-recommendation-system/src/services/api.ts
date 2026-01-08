@@ -98,7 +98,10 @@ export async function deleteBook(id: string): Promise<void> {
 /**
  * Get AI-powered book recommendations using Amazon Bedrock
  */
-export async function getRecommendations(query: string): Promise<Recommendation[]> {
+export async function getRecommendations(query: string): Promise<{
+  recommendations: Recommendation[];
+  source: 'catalog' | 'general';
+}> {
   const headers = await getAuthHeaders();
 
   const response = await fetch(`${API_BASE_URL}/recommendations`, {
@@ -116,12 +119,12 @@ export async function getRecommendations(query: string): Promise<Recommendation[
   const data = await response.json();
   console.log('Raw API Response:', data);
 
-  // Lambda returns { recommendations: [...] }
+  // Lambda returns { recommendations: [...], source: 'catalog' | 'general' }
   const recommendations = data.recommendations || data || [];
   console.log('Parsed recommendations:', recommendations);
 
   // Add unique IDs and bookIds (AI doesn't return these)
-  return recommendations.map(
+  const processedRecommendations = recommendations.map(
     (
       rec: { title: string; author: string; reason: string; confidence: number },
       index: number
@@ -134,6 +137,11 @@ export async function getRecommendations(query: string): Promise<Recommendation[
       author: rec.author,
     })
   );
+
+  return {
+    recommendations: processedRecommendations,
+    source: data.source || 'catalog',
+  };
 }
 
 /**

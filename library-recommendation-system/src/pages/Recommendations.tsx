@@ -13,6 +13,7 @@ export function Recommendations() {
   const [query, setQuery] = useState('');
   const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [source, setSource] = useState<'catalog' | 'general' | null>(null);
   const navigate = useNavigate();
 
   const handleBookClick = async (title: string) => {
@@ -46,19 +47,28 @@ export function Recommendations() {
 
     // Clear previous results
     setRecommendations([]);
+    setSource(null);
 
     setIsLoading(true);
     try {
       console.log('Sending query to API:', query);
 
       // Real Bedrock API call with user query
-      const recs = await getRecommendations(query);
-      console.log('Received recommendations:', recs);
+      const response = await getRecommendations(query);
+      console.log('Received recommendations:', response);
 
-      setRecommendations(recs);
+      // Try to match recommendations with books in our database to get cover images
+      const books = await getBooks();
+      const enrichedRecs = response.recommendations.map((rec) => {
+        const matchingBook = books.find((b) => b.title.toLowerCase() === rec.title.toLowerCase());
+        return {
+          ...rec,
+          coverImage: matchingBook?.coverImage,
+        };
+      });
 
-      // AI recommendations don't need book details - they include title/author
-      // No need to fetch from database
+      setRecommendations(enrichedRecs);
+      setSource(response.source);
     } catch (error) {
       console.error('Recommendation error:', error);
       handleApiError(error);
@@ -156,9 +166,39 @@ export function Recommendations() {
 
         {!isLoading && recommendations.length > 0 && (
           <div>
-            <h2 className="text-3xl font-bold mb-8">
+            <h2 className="text-3xl font-bold mb-6">
               <span className="gradient-text">Recommended for You</span>
             </h2>
+
+            {/* Source indicator - only show if general (not in catalog) */}
+            {source === 'general' && (
+              <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+                <div className="flex items-start gap-3">
+                  <svg
+                    className="w-5 h-5 text-amber-600 mt-0.5 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <div>
+                    <p className="text-amber-900 font-semibold">
+                      No matches found in our library catalog
+                    </p>
+                    <p className="text-amber-700 text-sm mt-1">
+                      Showing general recommendations from our AI. These books may not be available
+                      in our catalog yet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Display AI recommendations directly */}
             <div className="space-y-6">
@@ -169,7 +209,20 @@ export function Recommendations() {
                   className="glass-effect rounded-2xl shadow-xl border border-white/20 p-6 hover-glow transition-all duration-300 cursor-pointer group"
                 >
                   <div className="flex items-start gap-6">
-                    <div className="w-28 h-40 bg-linear-to-br from-violet-100 to-indigo-100 rounded-xl shadow-lg flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    {rec.coverImage ? (
+                      <img
+                        src={rec.coverImage}
+                        alt={rec.title}
+                        className="w-28 h-40 rounded-xl shadow-lg object-cover shrink-0 group-hover:scale-105 transition-transform"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                        }}
+                      />
+                    ) : null}
+                    <div
+                      className={`w-28 h-40 bg-linear-to-br from-violet-100 to-indigo-100 rounded-xl shadow-lg flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform ${rec.coverImage ? 'hidden' : ''}`}
+                    >
                       <svg
                         className="w-12 h-12 text-violet-400"
                         fill="none"

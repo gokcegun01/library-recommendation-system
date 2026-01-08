@@ -15,6 +15,8 @@ export function Books() {
   const [isLoading, setIsLoading] = useState(true);
   const [sortBy, setSortBy] = useState('title');
   const [selectedGenre, setSelectedGenre] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const booksPerPage = 16;
 
   useEffect(() => {
     loadBooks();
@@ -79,10 +81,12 @@ export function Books() {
   };
 
   const handleSearch = (query: string) => {
+    setCurrentPage(1); // Reset to first page on search
     applyFilters(query, selectedGenre);
   };
 
   const handleGenreChange = (genre: string) => {
+    setCurrentPage(1); // Reset to first page on filter
     setSelectedGenre(genre);
     applyFilters('', genre);
   };
@@ -91,6 +95,17 @@ export function Books() {
     setSortBy(value);
     const sorted = sortBooks(filteredBooks, value);
     setFilteredBooks(sorted);
+  };
+
+  // Pagination logic
+  const totalPages = Math.ceil(filteredBooks.length / booksPerPage);
+  const startIndex = (currentPage - 1) * booksPerPage;
+  const endIndex = startIndex + booksPerPage;
+  const currentBooks = filteredBooks.slice(startIndex, endIndex);
+
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   if (isLoading) {
@@ -164,16 +179,50 @@ export function Books() {
         </div>
 
         {/* Book Grid */}
-        <BookGrid books={filteredBooks} />
+        <BookGrid books={currentBooks} />
 
-        {/* TODO: Implement pagination */}
-        {filteredBooks.length > 12 && (
+        {/* Pagination */}
+        {totalPages > 1 && (
           <div className="mt-12 flex justify-center">
-            <div className="glass-effect px-6 py-3 rounded-xl border border-white/20">
-              <span className="text-slate-600 font-medium">Pagination coming soon...</span>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => goToPage(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="px-4 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+              >
+                Previous
+              </button>
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => goToPage(page)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                    currentPage === page
+                      ? 'bg-violet-600 text-white shadow-lg'
+                      : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+
+              <button
+                onClick={() => goToPage(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+              >
+                Next
+              </button>
             </div>
           </div>
         )}
+
+        {/* Results info */}
+        <div className="mt-6 text-center text-slate-600">
+          Showing {startIndex + 1}-{Math.min(endIndex, filteredBooks.length)} of{' '}
+          {filteredBooks.length} books
+        </div>
       </div>
     </div>
   );
