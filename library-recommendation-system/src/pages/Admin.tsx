@@ -3,7 +3,7 @@ import { Button } from '@/components/common/Button';
 import { Input } from '@/components/common/Input';
 import { Modal } from '@/components/common/Modal';
 import { LoadingSpinner } from '@/components/common/LoadingSpinner';
-import { getBooks, createBook, deleteBook } from '@/services/api';
+import { getBooks, createBook, deleteBook, updateBook } from '@/services/api';
 import { Book } from '@/types';
 import { handleApiError, showSuccess } from '@/utils/errorHandling';
 
@@ -81,10 +81,9 @@ export function Admin() {
     }
 
     try {
-      // Update book in local state (mock implementation)
-      const updatedBooks = books.map((b) =>
-        b.id === editingBook.id ? { ...editingBook, ...newBook } : b
-      );
+      // Update book in DynamoDB
+      const updated = await updateBook(editingBook.id, newBook);
+      const updatedBooks = books.map((b) => (b.id === editingBook.id ? updated : b));
       setBooks(updatedBooks);
       setIsModalOpen(false);
       setEditingBook(null);
