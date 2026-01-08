@@ -15,6 +15,7 @@ export function Admin() {
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingBook, setEditingBook] = useState<Book | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const [newBook, setNewBook] = useState({
     title: '',
     author: '',
@@ -25,6 +26,14 @@ export function Admin() {
     publishedYear: new Date().getFullYear(),
     isbn: '',
   });
+
+  // Filter books based on search query
+  const filteredBooks = books.filter(
+    (book) =>
+      book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      book.genre.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   useEffect(() => {
     loadBooks();
@@ -158,50 +167,70 @@ export function Admin() {
 
         {/* Books Management */}
         <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-slate-200 p-6">
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
             <h2 className="text-2xl font-bold text-slate-900">Manage Books</h2>
-            <Button variant="primary" onClick={() => setIsModalOpen(true)}>
-              Add New Book
-            </Button>
+            <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto">
+              <Input
+                label=""
+                type="text"
+                placeholder="Search by title, author, or genre..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="md:w-80"
+              />
+              <Button variant="primary" onClick={() => setIsModalOpen(true)}>
+                Add New Book
+              </Button>
+            </div>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b">
-                  <th className="text-left py-3 px-4">Title</th>
-                  <th className="text-left py-3 px-4">Author</th>
-                  <th className="text-left py-3 px-4">Genre</th>
-                  <th className="text-left py-3 px-4">Rating</th>
-                  <th className="text-left py-3 px-4">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {books.map((book) => (
-                  <tr key={book.id} className="border-b hover:bg-slate-50">
-                    <td className="py-3 px-4">{book.title}</td>
-                    <td className="py-3 px-4">{book.author}</td>
-                    <td className="py-3 px-4">{book.genre}</td>
-                    <td className="py-3 px-4">{book.rating}</td>
-                    <td className="py-3 px-4">
-                      <div className="flex gap-2">
-                        <Button variant="secondary" size="sm" onClick={() => handleEditBook(book)}>
-                          Edit
-                        </Button>
-                        <Button
-                          variant="danger"
-                          size="sm"
-                          onClick={() => handleDeleteBook(book.id)}
-                        >
-                          Delete
-                        </Button>
-                      </div>
-                    </td>
+          {filteredBooks.length === 0 ? (
+            <div className="text-center py-8 text-slate-500">
+              {searchQuery ? 'No books found matching your search.' : 'No books available.'}
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b">
+                    <th className="text-left py-3 px-4">Title</th>
+                    <th className="text-left py-3 px-4">Author</th>
+                    <th className="text-left py-3 px-4">Genre</th>
+                    <th className="text-left py-3 px-4">Rating</th>
+                    <th className="text-left py-3 px-4">Actions</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody>
+                  {filteredBooks.map((book) => (
+                    <tr key={book.id} className="border-b hover:bg-slate-50">
+                      <td className="py-3 px-4">{book.title}</td>
+                      <td className="py-3 px-4">{book.author}</td>
+                      <td className="py-3 px-4">{book.genre}</td>
+                      <td className="py-3 px-4">{book.rating}</td>
+                      <td className="py-3 px-4">
+                        <div className="flex gap-2">
+                          <Button
+                            variant="secondary"
+                            size="sm"
+                            onClick={() => handleEditBook(book)}
+                          >
+                            Edit
+                          </Button>
+                          <Button
+                            variant="danger"
+                            size="sm"
+                            onClick={() => handleDeleteBook(book.id)}
+                          >
+                            Delete
+                          </Button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
 
         {/* Add/Edit Book Modal */}
@@ -230,13 +259,29 @@ export function Admin() {
               required
             />
 
-            <Input
-              label="Genre"
-              type="text"
-              value={newBook.genre}
-              onChange={(e) => setNewBook({ ...newBook, genre: e.target.value })}
-              required
-            />
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-slate-700 mb-1">
+                Genre <span className="text-red-500">*</span>
+              </label>
+              <select
+                value={newBook.genre}
+                onChange={(e) => setNewBook({ ...newBook, genre: e.target.value })}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                required
+              >
+                <option value="">Select a genre</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Romance">Romance</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Horror">Horror</option>
+                <option value="Historical Fiction">Historical Fiction</option>
+                <option value="Literary Fiction">Literary Fiction</option>
+                <option value="Contemporary">Contemporary</option>
+              </select>
+            </div>
 
             <div className="mb-4">
               <label className="block text-sm font-medium text-slate-700 mb-1">Description</label>
@@ -253,6 +298,26 @@ export function Admin() {
               value={newBook.coverImage}
               onChange={(e) => setNewBook({ ...newBook, coverImage: e.target.value })}
             />
+
+            {/* Cover Image Preview */}
+            {newBook.coverImage && (
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Cover Preview
+                </label>
+                <div className="flex justify-center">
+                  <img
+                    src={newBook.coverImage}
+                    alt="Book cover preview"
+                    className="h-48 w-auto rounded-lg shadow-md object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src =
+                        'https://via.placeholder.com/300x450?text=Invalid+Image+URL';
+                    }}
+                  />
+                </div>
+              </div>
+            )}
 
             <Input
               label="Rating"
